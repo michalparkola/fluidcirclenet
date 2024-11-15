@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Dzień 9 – Planning Poker	</title>
+	<atom:link href="/dzien-9-planning-poker/feed/" rel="self" type="application/rss+xml" />
+	<link>/dzien-9-planning-poker/</link>
+	<description></description>
+	<lastBuildDate>Fri, 15 Nov 2024 22:57:08 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7</generator>
+	<item>
+		<title>
+		By: Michał Parkoła		</title>
+		<link>/dzien-9-planning-poker/#comment-24</link>
+
+		<dc:creator><![CDATA[Michał Parkoła]]></dc:creator>
+		<pubDate>Fri, 01 Feb 2013 16:34:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=999#comment-24</guid>
+
+					<description><![CDATA[Inny niezły opis Planning Pokera: http://controlyourchaos.wordpress.com/2013/01/22/a-guide-to-using-the-estimation-card-games/]]></description>
+			<content:encoded><![CDATA[<p>Inny niezły opis Planning Pokera: <a href="http://controlyourchaos.wordpress.com/2013/01/22/a-guide-to-using-the-estimation-card-games/" rel="nofollow ugc">http://controlyourchaos.wordpress.com/2013/01/22/a-guide-to-using-the-estimation-card-games/</a></p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

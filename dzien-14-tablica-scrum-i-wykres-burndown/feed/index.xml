@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Dzień 14 – Tablica Scrum i wykres Burndown	</title>
+	<atom:link href="/dzien-14-tablica-scrum-i-wykres-burndown/feed/" rel="self" type="application/rss+xml" />
+	<link>/dzien-14-tablica-scrum-i-wykres-burndown/</link>
+	<description></description>
+	<lastBuildDate>Fri, 15 Nov 2024 22:57:08 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7</generator>
+	<item>
+		<title>
+		By: Michał Parkoła		</title>
+		<link>/dzien-14-tablica-scrum-i-wykres-burndown/#comment-27</link>
+
+		<dc:creator><![CDATA[Michał Parkoła]]></dc:creator>
+		<pubDate>Sun, 10 Feb 2013 18:36:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1086#comment-27</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/dzien-14-tablica-scrum-i-wykres-burndown/#comment-26&quot;&gt;zxYann&lt;/a&gt;.
+
+Zaskakujące, ale prawdziwe. Też bym nie uwierzył, gdyby nie to, że widziałem takie przypadki na własne oczy.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/dzien-14-tablica-scrum-i-wykres-burndown/#comment-26">zxYann</a>.</p>
+<p>Zaskakujące, ale prawdziwe. Też bym nie uwierzył, gdyby nie to, że widziałem takie przypadki na własne oczy.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: zxYann		</title>
+		<link>/dzien-14-tablica-scrum-i-wykres-burndown/#comment-26</link>
+
+		<dc:creator><![CDATA[zxYann]]></dc:creator>
+		<pubDate>Sun, 10 Feb 2013 09:43:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1086#comment-26</guid>
+
+					<description><![CDATA[Po samym artykule widać że szefc bez butów chodzi. Jak można panować nad dowolnym projektem jak wszystko trzymane jest na korkowej tablicy. Wdrażanie Scruma w taki sposób bez wsparcia technologii, która jest nawet darmowa to wręcz ironia.
+
+
+Mówienie o efektywności i przewidywaniu bez tego to kompletna abstrakcja.]]></description>
+			<content:encoded><![CDATA[<p>Po samym artykule widać że szefc bez butów chodzi. Jak można panować nad dowolnym projektem jak wszystko trzymane jest na korkowej tablicy. Wdrażanie Scruma w taki sposób bez wsparcia technologii, która jest nawet darmowa to wręcz ironia.</p>
+<p>Mówienie o efektywności i przewidywaniu bez tego to kompletna abstrakcja.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

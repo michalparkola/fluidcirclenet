@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Dzień 15 – Przegląd Sprintu, czyli jak przestałem sie martwić i pokochałem Klienta	</title>
+	<atom:link href="/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/feed/" rel="self" type="application/rss+xml" />
+	<link>/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/</link>
+	<description></description>
+	<lastBuildDate>Fri, 15 Nov 2024 22:57:08 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7</generator>
+	<item>
+		<title>
+		By: Michał Parkoła		</title>
+		<link>/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/#comment-29</link>
+
+		<dc:creator><![CDATA[Michał Parkoła]]></dc:creator>
+		<pubDate>Thu, 28 Feb 2013 12:57:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1129#comment-29</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/#comment-28&quot;&gt;DruM&lt;/a&gt;.
+
+Nadchodzi wielkimi krokami. Następny odcinek będzie o retrospekcjach :)]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/#comment-28">DruM</a>.</p>
+<p>Nadchodzi wielkimi krokami. Następny odcinek będzie o retrospekcjach 🙂</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: DruM		</title>
+		<link>/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/#comment-28</link>
+
+		<dc:creator><![CDATA[DruM]]></dc:creator>
+		<pubDate>Thu, 28 Feb 2013 11:54:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1129#comment-28</guid>
+
+					<description><![CDATA[Czekamy na dalszy ciąg.....]]></description>
+			<content:encoded><![CDATA[<p>Czekamy na dalszy ciąg&#8230;..</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

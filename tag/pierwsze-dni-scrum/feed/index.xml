@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Pierwsze Dni Scrum &#8211; Fluid Circle</title>
+	<atom:link href="/tag/pierwsze-dni-scrum/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description></description>
+	<lastBuildDate>Fri, 15 Nov 2024 22:57:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7</generator>
+
+<image>
+	<url>/wp-content/uploads/2020/08/cropped-cropped-fluidcircle-2019-logo-1-32x32.png</url>
+	<title>Pierwsze Dni Scrum &#8211; Fluid Circle</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dzień 17 – Dług Techniczny, czyli jak utrzymać wysokie tempo rozwoju</title>
+		<link>/30-dni-scrum-dzien-17-dlug-techniczny/</link>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Wed, 25 Dec 2013 20:00:28 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1335</guid>
+
+					<description><![CDATA[Witamy po długiej przerwie. Niniejszym wznawiamy cykl &#8220;Pierwsze Dni Scrum&#8221; i wchodzimy w obszar wykraczający poza uniwersalne reguły Scrum, lecz ważny dla wszystkich zespołów stosujących Scrum w obrębie inżynierii oprogramowania, a mianowicie ZPI – zwinny praktyki inżynierskie. Ale zacznijmy od początku: Dlaczego szybkie dostarczanie &#8220;działającego oprogramowania&#8221; nie wystarczy? Wyobraźmy sobie taką sytuację: nasz Właściciel Produktu ma &#8230; <a href="/30-dni-scrum-dzien-17-dlug-techniczny/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 17 – Dług Techniczny, czyli jak utrzymać wysokie tempo rozwoju</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Witamy po długiej przerwie. Niniejszym wznawiamy cykl &#8220;<em><a href="https://fluidcircle.wordpress.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a></em>&#8221; i wchodzimy w obszar wykraczający poza uniwersalne reguły Scrum, lecz ważny dla wszystkich zespołów stosujących Scrum w obrębie inżynierii oprogramowania, a mianowicie ZPI – zwinny praktyki inżynierskie. Ale zacznijmy od początku:</p>
+<p><strong>Dlaczego szybkie dostarczanie &#8220;działającego oprogramowania&#8221; nie wystarczy?</strong></p>
+<p>Wyobraźmy sobie taką sytuację: nasz Właściciel Produktu ma świetny pomysł na biznes i dokładnie wie jak przekazać swoją wizję zespołowi, zespół dobrze rozumie jak działa Scrum i sprawnie się samoorganizuje pod opieką doświadczonego Scrum Mastera, który tydzień w tydzień rozbija w pył wszelkie przeszkody organizacyjne. Mijają sprinty, przyrosty przyrastają, pierwsi Klienci kupują, PO jest zadowolony, zespół jest zadowolony, management się cieszy. Bajka&#8230;</p>
+<p>Błogostan trwa kilka miesięcy, lecz stopniowo, jakby nie wiadomo skąd, pojawia się coraz więcej zgrzytów:</p>
+<ul>
+<li>znajdujemy coraz więcej błędów i ich naprawianie zajmuje coraz więcej czasu,</li>
+<li>coraz częściej naprawienie jednego błędu powoduje zepsucie czegoś innego,</li>
+<li>dodanie nawet prostych funkcji zajmuje dużo dłużej niż na początku,</li>
+<li>tempo prac (<em>velocity</em>) maleje mimo ulepszeń organizacyjnych wprowadzanych po retrospekcjach.</li>
+</ul>
+<p>PO i management myśli sobie, że zespół przestał się starać, więc próbuje zastosować techniki pseudo-motywacji rodem z call center banku detalicznego, wysyłając sygnał, że zespół nie zasługuje na zaufanie i szacunek i musi być zdalnie sterowany i kontrolowany przez czujnych managerów. Zespół próbuje wyjaśnić, że powodem jest wzrastająca złożoność systemu i że to nie ich wina, ale kierownictwo odbiera to jako wymówki. Motywacja spada, produktywność jeszcze bardziej, Klienci zaczynają oglądać się za konkurencją.</p>
+<p>Sytuacja tylko się pogarsza szczególnie, że nikt nie zaadresował prawdziwego problemu, gdyż:</p>
+<p><strong>Czy da się utrzymać wysokie tempo prac zaniedbując jakość kodu</strong>?</p>
+<p>Czy znalazłeś się kiedyś w sytuacji, kiedy konieczność szybkiego dostarczania użytkownikom nowych funkcji zdominowało wszystko inne, w tym jakość wewnętrzną (mierzoną np. <a title="WTF/min" href="http://www.osnews.com/story/19266/WTFs_m">liczbą WTF/min podczas code review</a>), a nawet zewnętrzną (liczba błędów i niedociągnięć widocznych dla użytkowników)? Czy szef powiedział Ci kiedyś, że &#8220;<em>ma poprawnie działać dla użytkowników, a w środku choćby na zapałki</em>&#8221; albo &#8220;<em>wystarczy jakość na 80%, byle byśmy szybko dostarczyli nowe funkcje</em>&#8220;.</p>
+<p>To może być rozsądna strategia biznesowa, zakładając, że decydenci w pełni rozumieją konsekwencje swoich decyzji. Jest to problem, bo świetni biznesmeni i managerowie produktu rzadko są jednocześnie doświadczonymi architektami a doświadczeni architekci rzadko świetnie rozumieją reguły biznesu.</p>
+<p>Jak w tej sytuacji optymalnie wykorzystać wiedzą i doświadczenie obu stron?</p>
+<p><strong>Dług techniczny</strong></p>
+<p>Na ratunek przychodzi pojęcie <em>długu technicznego</em><span style="background-color:#ffff99;"><span style="background-color:#ffffff;"> (ang. technical debt), które pozwala obu stronom popatrzeć na postawiony wyżej problem w ich naturalnym języku. Metafora ta została użyta po raz pierwszy przez Warda Cunninghama w 1992 roku. Ward porównał w ten sposób pośpieszną produkcję kodu do szybkiej ekspansji, finansowanej kredytem. Dzięki niemu możemy szybciej osiągnąć nasze cele, lecz w naszej długoterminowej strategii musimy uwzględnić spłatę zaciągniętego długu i liczyć się z tym, że zbyt długie zwlekanie ze spłatą spowoduje narośnięcie kosztownych odsetek. </span></span><span style="background-color:#ffffff;">Jeżeli nie poświęcimy czasu na przywrócenie odpowiedniej jakości kodu, coraz trudniej będzie go utrzymywać i rozwijać.</span></p>
+<figure id="attachment_1345" aria-describedby="caption-attachment-1345" style="width: 448px" class="wp-caption aligncenter"><a href="http://www.sonarqube.org/"><img fetchpriority="high" decoding="async" class=" wp-image-1345" src="/wp-content/uploads/2013/12/technical-debt-clean.png" alt="Dług techniczny Sonar" width="448" height="223" srcset="/wp-content/uploads/2013/12/technical-debt-clean.png 560w, /wp-content/uploads/2013/12/technical-debt-clean-300x149.png 300w" sizes="(max-width: 448px) 100vw, 448px" /></a><figcaption id="caption-attachment-1345" class="wp-caption-text">Widok z SonarQube – narzędzia do kontroli jakości kodu</figcaption></figure>
+<p>Takie postawienie sprawy pozwala zrównoważyć obie perspektywy. Z jednej strony inwestowanie w jakość może nie mieć uzasadnienia ekonomicznego i architektom łatwiej to zaakceptować, jeśli za cel postawią sobie optymalizację wartości biznesowych, a nie tylko techniczne aspekty produktu. Z drugiej strony odbiorcy staną się świadomi konsekwencji ścinania zakrętów i chętniej zainwestują w jakość widząc jej bezpośredni wpływ na długofalowe utrzymanie wysokiego tempa rozwoju.</p>
+<p><strong>Dlaczego nie zawsze dbamy o jakość kodu?</strong></p>
+<p><span style="background-color:#ffffff;">Bo to trudne.</span></p>
+<p>Dlatego, choć nie mam przed oczami statystyki na ten temat, wiem, że większość zespołów nie dba o jakość kodu z zapałem niezbędnym do utrzymania wysokiego tempa rozwoju.</p>
+<p>Aby zwiększyć swoje szanse musimy ukształtować nasze otoczenie w taki sposób, by czynniki wspierające znacznie przeważały nad przeszkodami. Przydatny model opisuje <span style="background-color:#ffffff;">Jurgen Appelo w swojej książce &#8220;<em><a title="Jak zmienić świat?" href="http://fluidcircle.wordpress.com/zmiana/">Jak zmienić świat</a></em>&#8220;. Według modelu ADKAR przeszkodą blokującą udaną zmianę może być między innymi:</span></p>
+<ul>
+<li><span style="background-color:#ffffff;"><strong>Brak świadomości problemu</strong> (<strong>A</strong>wareness) – brak bolesnego doświadczenia zespołu, Właściciela Produktu i kierownictwa w zakresie długofalowych konsekwencji zaniedbania jakości kodu. Co gorsza może się okazać, że w przeszłości osoby te wykopały się z dołka niskiej jakości za pomocą dużej dawki morderczego wysiłku z domieszką szczęścia i teraz uważają, że heroiczny wysiłek i improwizacja niwelują potrzebę systematyczności i proaktywnego inwestowania w jakość.</span></li>
+<li><span style="background-color:#ffffff;"><strong>Brak motywacji lub aktywna demotywacja</strong> (<strong>D</strong>esire) – jeśli osoba posiadająca władzę w organizacji explicite stawia inne korzyści ponad jakością trudno wykrzesać w sobie chęć dyskutowania. Odpowiedzialny profesjonalista znajdzie sposób, by pokazać jak wysoka jakość wpłynie na sukces w języku odbiorcy i czym grozi jej zaniedbanie, ale często łatwiej jest po prostu podporządkować się obowiązującym oczekiwaniom i zrzucić odpowiedzialność z własnych barków.</span></li>
+<li><span style="background-color:#ffffff;"><strong>Brak wiedzy i umiejętności</strong> (<strong>K</strong>nowladge i <strong>A</strong>bility) – inżynieria złożonych systemów jest po prostu trudna. Nawet doświadczeni specjaliści muszą włożyć dużo wysiłku w stosowanie dobrych praktyk i ciągłe poznawanie nowych. Bez wiedzy i umiejętności dobre chęci nie wystarczą.</span></li>
+<li><span style="background-color:#ffffff;"><strong>Brak mechanizmów utrwalających</strong> (<strong>R</strong>einforce) –  wszystkich powyższych przeszkód nie wystarczy zaadresować raz i o nich zapomnieć. Dla długofalowego sukcesu potrzebne są długofalowe mechanizmy wspierające i utrwalające pozytywne aspekty naszych praktyk oraz niewelujące zagrożenia.</span></li>
+</ul>
+<p><strong>Jak się pozbyć długu technicznego i zapobiegać nierozsądnemu jego zaciąganiu?</strong></p>
+<p><!-- ^ Position is not set to relative / absolute here because of Mozilla --></p>
+<p>Chcesz uniknąć przeistoczenia Twojego zespołu w grupę <a title="Szambonurki" href="https://sites.google.com/site/agilewarsaw/masz-ju-do-bycia-szambonurkiem-czyli-o-tym-co-robi-aby-praca-w-projekcie-utrzymaniowym-dawaa-satysfakcj">szambonurków</a>? Przy rosnącej złożoności systemu nie jest to łatwe. Na pewno czeka Cię duży wysiłek. Nagrodą za ten wysiłek jest sukces Twojej organizacji i budowanie Twojej reputacji jako wysokiej klasy profesjonalisty.<span style="background-color:#ffff99;"><br />
+</span></p>
+<p><span style="background-color:#ffffff;">Aby odwrócić, albo chociaż spowolnić, zaciąganie długu technicznego albo spłacić wcześniej zaciągnięty dług potrzebne są świadome działania. Jest milion różnych podejść, niżej wybraliśmy dla Ciebie najważniejsze:</span></p>
+<p><span style="background-color:#ffffff;">Pisząc nowy kod możesz:</span></p>
+<ul>
+<li><span style="background-color:#ffffff;"><strong>automatyzować testy</strong> jednostkowe, integracyjne i funkcjonalne oraz uruchamiać je przy każdej zmianie za pomocą serwera <strong>Continuous Integration</strong>,</span></li>
+<li><span style="background-color:#ffffff;">stosować programowanie zorientowane na testy (<strong>Test Driven Development</strong>),</span></li>
+<li><span style="background-color:#ffffff;"><strong>programować w parach</strong>,</span></li>
+<li><span style="line-height:1.5em;">dbać o (samo)edukację w zakresie technik pomagających utrzymywać wysoką jakość kodu,</span></li>
+<li><span style="line-height:1.5em;">utrzymywać wysoką czytelność kodu (mierzoną chociażby zrozumiałością dla innych członków zespołu) jako jedno z ważnych kryteriów jakości.</span></li>
+</ul>
+<p><span style="background-color:#ffffff;">Pracując z istniejącym kodem możesz:</span></p>
+<ul>
+<li><span style="background-color:#ffffff;"><strong>refaktoryzować</strong>, aż do usunięcia prawie wszystkich <a title="Brzydkie zapachy kodu" href="http://en.wikipedia.org/wiki/Code_smell"><span style="background-color:#ffffff;">brzydkich zapachów</span></a> i osiągnięcia <a title="Clean Code" href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"><span style="background-color:#ffffff;">czystego kodu</span></a>, z którego dumny byłby nawet <a href="https://twitter.com/unclebobmartin"><span style="background-color:#ffffff;">Wujek Bob</span></a>.</span></li>
+<li><span style="background-color:#ffffff;">stosować <strong>statyczną analizę kodu</strong> (i poprawiać wykryte usterki),</span></li>
+<li><span style="background-color:#ffffff;">badać pokrycie kodu przez testy,</span></li>
+<li><span style="background-color:#ffffff;">stosować przeglądy kodu.</span></li>
+</ul>
+<p><!-- ^ Position is not set to relative / absolute here because of Mozilla --></p>
+<p><span style="background-color:#ffffff;">W ramach kolejnych dni z cyklu porozmawiamy więcej o wybranych technikach i korzyściach, jakie one wnoszą, a tymczasem zostawimy Cię z dwoma pytaniami.</span></p>
+<p><!-- ^ Position is not set to relative / absolute here because of Mozilla --></p>
+<p><strong>Pytania do Was</strong>:</p>
+<ul>
+<li><em>Jak często rozmowy między &#8220;IT&#8221; a &#8220;biznesem&#8221; na temat jakości kodu i innych spraw technicznych udaje się w Twojej organizacji zakończyć porozumieniem uwzględniającym potrzeby wszystkich zainteresowanych?</em></li>
+<li><em>Co robisz na co dzień, by zminimalizować narastanie długu technicznego lub sukcesywnie spłacać dług który nagrabiliście sobie wcześniej?</em></li>
+</ul>
+<p><a title="Kontakt" href="http://fluidcircle.wordpress.com/kontakt/">Skontaktuj się z nami</a>, jeśli chcesz podzielić się swoimi doświadczeniami lub chciałbyś skorzystać z naszej pomocy w osiąganiu Twojego sukcesu.</p>
+<p>Marcin Zajączkowski i Michał Parkoła</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Dzień 16 – Retrospekcje: popatrz w tyl, żeby iść w przód</title>
+		<link>/dzien-16-retrospekcje-popatrz-w-tyl-zeby-isc-w-przod/</link>
+					<comments>/dzien-16-retrospekcje-popatrz-w-tyl-zeby-isc-w-przod/#comments</comments>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2013 00:03:22 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1143</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. Umiejętność wyciągania wniosków z własnych doświadczeń jest podstawą uczenia się i rozwoju. Krótka pętla zbierania danych, planowania ulepszeń i wprowadzania ich w życie jest niezbędnym elementem empirycznego podejścia, jakim jest Scrum. Tak samo jak co Sprint dostarczamy kolejne ulepszenia w naszym produkcie tak powinniśmy co sprint ulepszać środowisko &#8230; <a href="/dzien-16-retrospekcje-popatrz-w-tyl-zeby-isc-w-przod/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 16 – Retrospekcje: popatrz w tyl, żeby iść w przód</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>Ten post jest częścią cyklu <a href="https://atomic-temporary-67692707.wpcomstaging.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p>Umiejętność wyciągania wniosków z własnych doświadczeń jest podstawą uczenia się i rozwoju. Krótka pętla zbierania danych, planowania ulepszeń i wprowadzania ich w życie jest niezbędnym elementem empirycznego podejścia, jakim jest Scrum.</p>
+<p>Tak samo jak co Sprint dostarczamy kolejne ulepszenia w naszym produkcie tak powinniśmy co sprint ulepszać środowisko naszej pracy, stosowane metody i narzędzia oraz wszystkie inne czynniki (na które mamy wpływ), które pozytywnie lub negatywnie wpływają na naszą efektywność.</p>
+<p>W Scrum okazją do przejścia tego procesu są Retrospekcje, które odbywają się pod koniec każdego Sprintu.</p>
+<p><strong>Szkielet Retrospekcji</strong></p>
+<p>Jak piszą boginie retrospekcji Esther Derby i Diana Larsen w książce &#8220;<a title="Agile Retrospectives" href="http://www.amazon.com/Agile-Retrospectives-Making-Teams-ebook/dp/B00B03SRJW/"><em>Agile Retrospectives</em></a>&#8220;, każde takie wydarzenie powinno w takie czy innej formie zawierać następujące kroki:</p>
+<ol>
+<li><strong>Ustal uwagę</strong> (Set the Stage) – przywołaj cel retrospekcji i podstawowe zasady (zakaz obwiniania jednostek, ulepszanie systemu, &#8230;). Ustal ramy czasowe i organizacyjne.</li>
+<li><strong>Zbierz dane</strong> (Gather Data) – zawsze staraj się zebrać i wspólnie przyjąć do wiadomości jak najwięcej faktów na temat przebiegu sprintu. Od liczby i rodzaju napotkanych bugów po nastrój poszczególnych członków zespołu w kolajnych dniach.</li>
+<li><strong>Zrozum sytuację</strong> (Generate Insight) – zadbaj o to, żeby cały zespół wypracował wspólne zrozumienie tego, co oznaczają zebrane fakty i jak można ich użyć by poprawić sytuację.</li>
+<li><strong>Zaplanuj działanie</strong> (Decide What to Do) – na podstawie wspólnego zrozumienia sytuacji zaplanujcie konkretne zmiany, które mogą pomóc Wam skuteczniej i przyjemniej pracować. Plany te powinny być możliwie konkretne, uwzględnione w planie kolejnego sprintu i najlepiej powiązane z pomiarem, który jednoznacznie odpowie na pytanie, czy zmiana przyniosła oczekiwane efekty.</li>
+<li><strong>Podsumuj retrospekcję</strong> (Close the Retrospective) – podziękuj wszystkim za uczestnictwo i powtórz, co zostało zaplanowane.</li>
+</ol>
+<p>Powyższe kroki można zrealizować mniej lub bardziej wprost lub wpleść je w różnorodne plany retrospekcji, o jakich można przeczytać lub pomyśleć. Retrospekcje nie muszą (i nie powinny) być zawsze takie same, jednak lekkomyślne pominięcie któregoś z tych elementów może zatrzeć granicę między wartościową retrospekcją a czystą rozrywką lub wręcz destruktywną sesją narzekania.</p>
+<p><strong>Pomysły na retrospekcje</strong></p>
+<p>Skąd brać pomysły na skuteczne i angażujące retrospekcje? Jak słusznie <a title="Retrospectives Reloaded" href="http://blog.brodzinski.com/2013/02/retrospectives-reloaded.html">zauważa Paweł Brodziński</a>, czasem Scrum Master powinien powściągnąć swoje kreatywne zapędy i zaczerpnąć pomysły z samego zespołu. Nawet &#8220;obiektywnie lepsza&#8221; metoda przegra w konkurencji z podejściem wywiedzionym z naszego realnego środowiska.</p>
+<p>Jeśli mimo to szukasz inspiracji, istną kopalnią pomysłów jest wspomniana wyżej książka. Wiele schematów retrospekcji można też znaleźć w internecie. Tutaj przytoczymy zaś trzy:</p>
+<p><strong>Mad, sad, glad</strong> – zadaj wszystkim razem i każdemu z osobna trzy pytania:</p>
+<ol>
+<li>Z czego jesteś zadowolony (glad)?</li>
+<li>Co Cię smuci (sad)?</li>
+<li>Co Cię wkurza (mad)?</li>
+</ol>
+<p><strong>Statek: żagiel i kotwica</strong> – wyobraźcie sobie, że Wasz projekt to okręt żeglujący w kierunku nowego lądu:</p>
+<ol>
+<li>Co jest wiatrem wypełniającym Wasze żagle i pchającym do przodu?</li>
+<li>Co jest kotwicą, która Was spowalnia?</li>
+<li>Czy gdzieś przed Wami czai się rafa, która może doprowadzić do katastrofy?</li>
+</ol>
+<p><strong>Luźna dyskusja</strong> – czasem retrospekcja nie wymaga wydumanego formatu. Może wystarczyć nieformalna rozmowa. Jednak nawet wtedy warto zadbać o to, żeby:</p>
+<ol>
+<li>podczas sprintu, na bieżąco zbierać tematy do omówienia na retrospekcji (inaczej wiele ważnych zagadnień jest po prostu zapominana),</li>
+<li>zadbać o to, żeby rozważać problemy w kontekście myślenia systemowego, a nie szukać winnych (w samym zespole lub poza nim),</li>
+<li>sprowadzać rozmowę do faktów bardziej niż opinii,</li>
+<li>wyjść z retrospekcji z konkretnymi zadaniami i uwzględnić je w planie następnego sprintu.</li>
+</ol>
+<p><strong>Analiza Problemów</strong></p>
+<p>Podczas retrospekcji oraz przy innych okazjach przydatne są często dwie popularne techniki analizy problemów, opisane niżej:</p>
+<p><strong>5xDlaczego</strong> (Five Whys) – gdy zidentyfikujemy problem, zamiast przystępować do jego rozwiązywania, pytamy <em>dlaczego</em> on wystepuje. Gdy znajdziemy przyczynę, pytamy <em>dlaczego</em> ona występuje i tak dalej pięć razy lub do momentu gdy jesteśmy w miarę pewni, że natrafiliśmy na źródłowy problem, a nie tylko na kolejne poziomy jego objawów.</p>
+<p style="text-align:left;"><strong>Ość Ishikawy</strong> – to diagram w kształcie szkieletu ryby pozwalający rozważyć wiele przyczyn składających się na występowanie danego problemu. Jest przydatny, gdy na nasz problem wpływa wiele różnych czynników jednocześnie. Każdy z nich możemy analizować głębiej, tak jak w metodzie 5xDlaczego, aż do zbudowania wystarczająco pełnego obrazu sytuacji.<img decoding="async" class="aligncenter" src="http://upload.wikimedia.org/wikipedia/commons/4/49/Diagram_przyczynowo-skutkowy.JPG" alt="" width="341" height="252" /></p>
+<p><strong>Appreciative Inquiry</strong></p>
+<p>Częstym błędem popełnianym przez zespoły podczas retrospekcji (a także przez wszelkiej maści coach&#8217;ów i konsultantów) jest zbytnie koncentrowanie się na problemach. Często dużo lepsze efekty można osiągnąć koncentrując się na pożądanych efektach oraz silnych stronach zespołu i procesu, które można rozszerzyć i wzmocnić.</p>
+<p>Metoda ta jest często lekceważona, bo &#8220;<em>przecież my tu mamy konkretne problemy, więc koncentrowanie się na pozytywach to forma mydlenia oczu&#8230;</em>&#8220;. A jednak okazuje się, że metoda ta, poprawnie przeprowadzona, ma zaskakującą moc. Nigdy nie zamiatamy problemów pod dywan, jednak gdy stosujemy takie <em>doceniające</em> podejście często okazuje się, że zamiast bezpośrednio zmagać się z problemami możemy je zniwelować lub w ogóle obejść dzięki spojrzeniu na sytuację z innej perspektywy.</p>
+<p><strong>Duże retrospekcje</strong></p>
+<p>Retrospekcje są wartościowe nie tylko dla pojedyńczych zespołów. Jeśli stoisz przed problemem zorganizowania retrospekcji dla większej organizacji <a title="Kontakt" href="http://atomic-temporary-67692707.wpcomstaging.com/kontakt/">skontaktuj się z nami</a>, a w międzyczasie przeczytaj jak <a title="Spotify Retrospectives" href="http://joakimsunden.com/2013/01/running-big-retrospectives-at-spotify/">duże retrospekcje wyglądają w szwedzkiej firmie Spotify</a>.</p>
+<p><strong>Ćwiczenie dla Was</strong>:<a href="/wp-content/uploads/2013/01/comments-icon.png"><img decoding="async" class=" wp-image-916 alignright" src="/wp-content/uploads/2013/01/comments-icon.png" alt="Porozmawiajmy!" width="77" height="77" /></a></p>
+<ol>
+<li><em>Jeśli do tej pory tego nie robicie, to spróbujcie wpleść w swoje retrospekcje kroki opisane w &#8220;Agile Retrospectives&#8221;.</em></li>
+<li><em>Jeśli nie zbieracie danych, na podstawie których prowadzicie retrospekcje to zacznijcie to robić.</em></li>
+<li><em>Jeśli Wasze retrospekcje wyglądają zawsze tak samo to spróbujcie zmienić format i wypróbować inne metody – zaproponowane przez sam zespół lub z któregoś ze wspomnianych wyżej źródeł.</em></li>
+</ol>
+]]></content:encoded>
+					
+					<wfw:commentRss>/dzien-16-retrospekcje-popatrz-w-tyl-zeby-isc-w-przod/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Dzień 15 – Przegląd Sprintu, czyli jak przestałem sie martwić i pokochałem Klienta</title>
+		<link>/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/</link>
+					<comments>/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/#comments</comments>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Mon, 18 Feb 2013 10:49:16 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1129</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. Sprawne tworzenie oprogramowania jest ważne, ale na niewiele się zdaje, jeśli to co produkuje zespół nie odpowiada najpilniejszym potrzebom odbiorców. Wysiłek zespołu jest też marnowany, jeśli pomiędzy przygotowaniem kolejnych ulepszeń, a oddaniem ich w ręce Klientów mija zbyt dużo czasu lub zespół nie ma sposobu zebrania od nich &#8230; <a href="/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 15 – Przegląd Sprintu, czyli jak przestałem sie martwić i pokochałem Klienta</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>Ten post jest częścią cyklu <a href="https://fluidcircle.wordpress.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p>Sprawne tworzenie oprogramowania jest ważne, ale na niewiele się zdaje, jeśli to co produkuje zespół nie odpowiada najpilniejszym potrzebom odbiorców. Wysiłek zespołu jest też marnowany, jeśli pomiędzy przygotowaniem kolejnych ulepszeń, a oddaniem ich w ręce Klientów mija zbyt dużo czasu lub zespół nie ma sposobu zebrania od nich informacji zwrotnej.</p>
+<p>Dzisiaj przyjrzymy się jak Scrum pomaga rozwiązać ten problem za pomocą <strong>Przeglądów Sprintu</strong> oraz jak w zaangażowaniu Klienta pomagają <strong>Radiatory Informacji</strong>.</p>
+<p><strong>Przegląd Sprintu</strong></p>
+<p>Przegląd Sprintu (Sprint Review) lub potocznie Demo jest po to, żeby:</p>
+<ol>
+<li><strong>zaprezentować odbiorcom nowe funkcje</strong> i cechy systemu, żeby wiedzieli, że istnieją i umieli ich użyć,</li>
+<li>na gorąco <strong>zebrać informację zwrotną</strong> o przydatności i jakości naszego produktu, żeby w następnym sprincie móc dostarczyć kolejną porcję najważniejszych ulepszeń,</li>
+<li>(przy okazji) formalnie potwierdzić, <strong>które historyjki zostały zakończone</strong> (zgodnie z ich treścią, kryteriami akceptacji i definicją ukończenia), a które muszą wrócić do backlogu.</li>
+</ol>
+<p>Oznacza to w szczególności, że w każdym przeglądzie powinni brać udział końcowi odbiorcy (wszyscy, jeśli się da lub chociaż ich reprezentatywni przedstawiciele). Jeśli z jakiegoś powodu nie da się takich ściągnąć, to ich interesy reprezentuje Właściciel Produktu. Szczególnie ważne jest wtedy zadbanie o inne okazje do zebrania feedbacku.</p>
+<p>Jak widać z powyższej listy najważniesza podczas prezentacji wyników naszej pracy jest <strong>empatia wobec potrzeb odbiorców</strong>! Oznacza to w szczególności, że powinniśmy:</p>
+<ol>
+<li>koncentrować się na tym, <strong>co zostało dostarczone, a nie jakie prace zostały wykonane</strong>,</li>
+<li>formułować naszą opowieść w <strong>języku zrozumiałym dla użytkowników</strong> (z pominięciem szczegółowego opisu rozwiązań technicznych),</li>
+<li>dać uczestnikom spotkania okazję wypowiedzieć się na temat nowych funkcji lub wręcz <strong>samodzielnie je wypróbować</strong>.</li>
+</ol>
+<p><strong>Czy Przegląd Sprintu to nowa nazwa UAT (User Acceptance Testing)?</strong></p>
+<p>Nie! Warto pamiętać, że Przegląd Sprintu to nie jest sesja UAT. Nie chcemy dopuścić do sytuacji, w której zespół świadomie oddaje niedokończone (w szczególności nie wystarczająco przetestowane) historyjki, w nadziei, że Klient i PO nie natrafią na widoczne braki lub oczekuje, że właśnie wyłapywanie błędów jest celem Przeglądu. Oficjalna akceptacja historyjek przez PO powinna być formalnością, bo wszystkie wątpliwości powinny być wcześniej omówione, a kluczowe założenia zapisane w kryteriach akceptacji. Zespół oddając historyjkę sam powinien zadbać o to, że spełnia ona wszystkie te kryteria oraz wszystkie standardy zapisane w Definition of Done.</p>
+<p><strong>Co dzieje się z historyjkami, których nie zdążyliśmy zakończyć?</strong></p>
+<p>Historyjki, które nie są gotowe (zgodnie z kryteriami akceptacji i definicją ukończenia) wracają do backlogu i są repriotytetyzowane. Być może wpadną do następnego Sprintu, być może zostaną odłożone na później, a być może w ogóle stracą aktualność. Jeśli zostaną wzięte do kolejnego Sprintu to w oszacowaniu można uwzględnić już wykonane prace cząstkowe. Jednak jeśli historyjka zostanie odłożona na później to warto konserwatywnie pozostawić oszacownie takie jak było – nie domknięte pół-produkty mają tendencję do szybkiej dezaktualizacji i wcale nie jest pewne czy za kilka sprintów dalej będą pomagać w dostarczeniu tej historyjki.</p>
+<p><strong>Czy możemy od czasu do czasu przymknąć oko i przepchnąć prawie-gotowe historyjki?</strong></p>
+<p>Możemy&#8230; Ale jedynie na własną szkodę! Jeśli pozwolimy na rozluźnienie dyscypliny to bardzo szybko dostaniemy &#8220;to co zwykle&#8221; opakowane w nową terminologię, a nie prawdziwy Scrum. Podniesienie przejrzystości całego procesu jest kluczowym elementem Scrum i jeśli zaczniemy rozmywać granice akceptowalności to cała konstrukcja rozleci się jak domek z kart. Może wydawać Ci się, że to zbyt ostre sformułowanie; lecz take nie jest. Otwartość, uczciwość i (samo)dyscyplina są niezbędnymi wartościami dla zespołów Scrum, bez których trudno sobie wyobrazić jego prawidłowe działanie!</p>
+<p><strong>Radiatory Informacji</strong></p>
+<p>Dodatkową pomocą we wzbudzeniu w naszych odbiorcach zainteresowania pracą zespołu służą, znane nam już, <a title="Dzień 14 – Tablica Scrum i wykres Burndown" href="http://fluidcircle.wordpress.com/2013/02/dzien-14-tablica-scrum-i-wykres-burndown/">radiatory informacji</a>. Jeśli każdy zainteresowany może w każdej chwili popatrzyć na tablicę i zobaczyć, jakie historyjki są obecnie realizowane oraz ile zadań pozostało do ich zakończenia, to będzie spokojniejszy i bardziej zadowolony z całego procesu. Działa to szczególnie dobrze, jeśli przed zastosowaniem Scrum prace developerskie były mało przejrzyste, a data zakończenia poszczególnych projektów nieprzewidywalna.</p>
+<p>Jeśli przejrzystość wobec osób z otoczenia zespołu jest dla nas szczególnie ważna możemy pójść krok dalej i przygotować specjalną tablicę dla zewnętrznych obserwatorów, na której można znaleźć cel bieżącego sprintu, daty kluczowych spotkań (z Przeglądem Sprintu na czele), kontakt do Właściciela Produktu i Scrum Mastera i ew. inne informacje pomagające zainteresowanym zorientować się w sytuacji bez przeszkadzania zespołowi w pracy.</p>
+<p><strong>Zadowolenie Klientów i efekt IKEA</strong></p>
+<p>Naszym celem jako dostawców rozwiązań jest z definicji zadowolenie Klientów. Głównym źródłem satysfakcji są po prostu nowe funkcje i ulepszenia dostarczane przez zespół, szczególnie, że dzięki regularnemu zbieraniu informacji zwortnej są to funkcje i ulepszenia, którz są dla użytkowników najbardziej wartościowe.</p>
+<p>Nie do pominięcia jest jednak psychologiczny efekt dania odbiorcom poczucia zaangażowania w tworzenie systemu. W ekonomii podobny mechanizm znany jest jako <a title="IKEA Effect" href="http://hbr.org/web/2009/hbr-list/ikea-effect-when-labor-leads-to-love">efekt IKEA</a>. Mówi on, że jako ludzie wyżej cenimy to, w co włożymy własny wysiłek. Dlatego meble z IKEI, która sami składamy, mogą być dla nas bardziej wartościowe niż takie same meble dostarczone w całości lub zmontowane przez dostawcę. Tak samo system, w którego tworzenie jak najwcześniej wciągnęliśmy naszych Klientów jest przez nich wyżej ceniony niż identyczny system, który zostanie im dostarczony przez odizolowany zespół.</p>
+<p><strong>Pytania do Was</strong>:</p>
+<p><a href="http://fluidcircle.wordpress.com/2013/01/dzien-1-jesli-myslisz-ze-scrum-jest-latwy-to-znaczy-ze-go-nie-rozumiesz/comments-icon/" rel="attachment wp-att-916"><img loading="lazy" decoding="async" class="alignright" src="/wp-content/uploads/2013/01/comments-icon.png" alt="Porozmawiajmy!" width="77" height="77" /></a></p>
+<ol>
+<li><em>Czy w Waszych Przeglądach Sprintu biorą udział użytkownicy końcowi?</em></li>
+<li><em>Czy informacja zwrotna, którą od nich dostajecie pomaga Wam ulepszyć Wasz produkt?</em></li>
+<li><em>Z jakich innych źródeł informacji zwrotnej korzystacie?</em></li>
+</ol>
+]]></content:encoded>
+					
+					<wfw:commentRss>/dzien-15-przeglad-sprintu-czyli-jak-przestalem-sie-martwic-i-pokochalem-klienta/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Dzień 14 – Tablica Scrum i wykres Burndown</title>
+		<link>/dzien-14-tablica-scrum-i-wykres-burndown/</link>
+					<comments>/dzien-14-tablica-scrum-i-wykres-burndown/#comments</comments>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Wed, 06 Feb 2013 14:44:36 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1086</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. Wczoraj rozmawialiśmy o tym, w czym mogą pomóc codzienne standup&#8217;y. Dzisiaj przyjrzymy się dwóm pozostałym narzędziom wspomagającym organizację pracy podczas sprintu: Tablicy Scrum i Wykresowi Wypalania (burndown). Tablica Scrum – zawsze wiemy na czym stoimy i jaki jest następny krok Standupy działają najlepiej, gdy odbywają się w bezpośrednim sąsiedztwie &#8230; <a href="/dzien-14-tablica-scrum-i-wykres-burndown/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 14 – Tablica Scrum i wykres Burndown</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>Ten post jest częścią cyklu <a href="https://atomic-temporary-67692707.wpcomstaging.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p>Wczoraj rozmawialiśmy o tym, <a title="Dzień 13 – Standup – Pomiar i adaptacja w trakcie sprintu" href="http://atomic-temporary-67692707.wpcomstaging.com/2013/02/dzien-13-standup-pomiar-i-adaptacja-w-trakcie-sprintu/">w czym mogą pomóc codzienne standup&#8217;y</a>. Dzisiaj przyjrzymy się dwóm pozostałym narzędziom wspomagającym organizację pracy podczas sprintu: Tablicy Scrum i Wykresowi Wypalania (<em>burndown</em>).</p>
+<p><strong>Tablica</strong> <strong>Scrum – zawsze wiemy na czym stoimy i jaki jest następny krok</strong></p>
+<p>Standupy działają najlepiej, gdy odbywają się w bezpośrednim sąsiedztwie tablicy, na której stale widoczny jest aktualny plan (Backlog Sprintu) na przykład w formie listy zadań z podziałem na zadania <em>do wykonania</em>, <em>w robocie</em> i <em>zakończone</em>. Na tablicy można też wizualizować inne ważne informacje: tematy do omówienia na retrospekcję, poziom subiektywnego zadowolenia wszystkich członków zespołu (poszukaj pod hasłem <em>happiness metric</em>) lub wyróżnione innym kolorem bieżące zlecenia utrzymaniowe, z którymi nie można poczekać do następnego sprintu.</p>
+<figure id="attachment_1105" aria-describedby="caption-attachment-1105" style="width: 300px" class="wp-caption aligncenter"><a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/02/dzien-14-tablica-scrum-i-wykres-burndown/tablicazburndownemilustracja/" rel="attachment wp-att-1105"><img loading="lazy" decoding="async" class="size-medium wp-image-1105" src="/wp-content/uploads/2013/02/tablicazburndownemilustracja.png?w=300&amp;h=198" alt="Tablica Scrum z wykresem burndown" width="300" height="198" srcset="/wp-content/uploads/2013/02/tablicazburndownemilustracja.png 673w, /wp-content/uploads/2013/02/tablicazburndownemilustracja-300x198.png 300w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-1105" class="wp-caption-text">Tablica Scrum z wykresem burndown</figcaption></figure>
+<p>Najlepszym narzędziem jest tu najczęściej zwykła tablica korkowa (białe zostawmy do rysowania podczas spotkań i dyskusji), z żółtymi karteczkami reprezentującymi zadania. Ma ona tą zaletę, że jest zawsze widoczna i łatwa do aktualizacji. Poza tym jest też łatwa do modyfikacji, jeśli zespół zechce np. wypróbować inny sposób śledzenia postępów. Stanowi też świetny <em>radiator informacji, w</em>okół którego rozgrywa się praca zespołu. Tablica stymuluje też interakcję z osobami poza zespołem, których uwage przyciągnęło coś co na niej zobaczyły.</p>
+<figure style="width: 312px" class="wp-caption aligncenter"><a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/02/dzien-14-tablica-scrum-i-wykres-burndown/tablicakorkowa/" rel="attachment wp-att-1103"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/tablicakorkowa.jpg?w=300&amp;h=225" alt="Tablica Korkowa" width="312" height="279" /></a><figcaption class="wp-caption-text">Tablica korkowa to często najlepsze rozwiązanie</figcaption></figure>
+<p>Oczywiście istnieje szereg narzędzi elektronicznych pozwalających zarządzać Tablicą Scrum. Kilka popularnych rozwiązań to:</p>
+<ol>
+<li>rozbudowany <a href="http://www.atlassian.com/software/greenhopper">Green Hopper</a> (będący nakładką na system Jira),</li>
+<li>minimalistyczne <a href="https://trello.com/">Trello</a>,</li>
+<li>nastawione na płynność przepływu pracy <a href="https://kanbanery.com/">Kanbanery</a>.</li>
+</ol>
+<p>Jeśli jednak zdecydujemy się na elektroniczną wersję tablicy to musimy się liczyć z mniejszą widocznością informacji w niej zawartych. Warto zastanowić się wtedy nad zniwelowaniem tej słabości np. poprzez wyświetlanie tablicy na centralnie umieszczonym ekranie, tak jak to robi np. warszawska firma <a title="TouK" href="http://touk.pl/">TouK</a>:</p>
+<figure id="attachment_1106" aria-describedby="caption-attachment-1106" style="width: 300px" class="wp-caption aligncenter"><a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/02/dzien-14-tablica-scrum-i-wykres-burndown/touk-tablica-ludzie/" rel="attachment wp-att-1106"><img loading="lazy" decoding="async" class="size-medium wp-image-1106" src="/wp-content/uploads/2013/02/touk-tablica-ludzie.jpg?w=300&amp;h=225" alt="TouK-Tablica-Ludzie" width="300" height="225" /></a><figcaption id="caption-attachment-1106" class="wp-caption-text">Elektronicza Tablica w TouK</figcaption></figure>
+<p><strong>Burndown</strong> i diagnoza sytuacji</p>
+<p>Po aktualizacji planu (np. podczas standupu) możemy podsumować ile pracy pozostało do wykonania i porównać tą liczbę z czasem pozostałym do zakończenia sprintu. Pozostałą pracę można mierzyć za pomocą sumy godzinowych oszacowań pozostałych zadań, samej liczby zadań (jeśli mamy ich dużo i wszystkie są mniej więcej podobnych rozmiarów) lub w dowolny inny, odpowiedni do sytuacji, sposób. Dystans pozostały do pokonania możemy zwizualizować za pomocą wykresu burndown, który pozwala nam na pierwszy rzut oka ocenić sytuację w sprincie:</p>
+<figure id="attachment_1110" aria-describedby="caption-attachment-1110" style="width: 300px" class="wp-caption aligncenter"><a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/02/dzien-14-tablica-scrum-i-wykres-burndown/burndown-zdrowy/" rel="attachment wp-att-1110"><img loading="lazy" decoding="async" class="size-medium wp-image-1110" src="/wp-content/uploads/2013/02/burndown-zdrowy.jpg?w=300&amp;h=231" alt="Burndown-Zdrowy" width="300" height="231" srcset="/wp-content/uploads/2013/02/burndown-zdrowy.jpg 649w, /wp-content/uploads/2013/02/burndown-zdrowy-300x232.jpg 300w" sizes="auto, (max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-1110" class="wp-caption-text">Zdrowy Burndown</figcaption></figure>
+<p>Kształt burndown&#8217;u pozwala nam też zdiagnozować ograniczenia, nawet jeśli wyrabiamy się w sprincie:</p>
+<p>Jeśli nasze <strong>postępy są wyraźnie wolniejsze niż zakładane</strong>, możemy natychmiast poinformować Właściciela Produktu i uzgodnić z nim, które zadania w sprincie mają najwyższy priorytet, a które będą musiały zostać odłożone na później.</p>
+<figure id="attachment_1112" aria-describedby="caption-attachment-1112" style="width: 300px" class="wp-caption aligncenter"><a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/02/dzien-14-tablica-scrum-i-wykres-burndown/burndown-tooslow/" rel="attachment wp-att-1112"><img loading="lazy" decoding="async" class="size-medium wp-image-1112" src="http://atomic-temporary-67692707.wpcomstaging.com/wp-content/uploads/2013/02/Burndown-TooSlow-300x229.jpg" alt="Ten burndown pokazuje, że nie wyrobimy się w sprincie! Na czym się skoncentrować? Co odłożyć na później?" width="300" height="229" /></a><figcaption id="caption-attachment-1112" class="wp-caption-text">Ten burndown pokazuje, że nie wyrobimy się w sprincie! Na czym się skoncentrować? Co odłożyć na później?</figcaption></figure>
+<p>Jeśli wykres ma kształt urwiska (większość zadań domykana jest dopiero pod koniec sprintu) to może to świadczyć o kilku możliwych problemach. Najczęściej występują dwa:</p>
+<ol>
+<li>Być może <strong>dzielimy pracę na zbyt długie zadania</strong> (w sprincie zadania rzadko powinny przekraczać jeden dzień). Akceptując wielodniowe, indywidualne prace tracimy możliwość śledzenia prawdziwej sytuacji i jeśli któreś z długich zadań się przeciągnie to dowiemy się o tym dopiero pod koniec sprintu – zbyt późno by cokolwiek poradzić.</li>
+<li>Być może zespół <strong>bierze (lub co gorsza: dostaje) do wykonania zbyt wiele pracy</strong> i pod koniec sprintu heroicznym wysiłkiem nadgania zaległości (co prowadzi do natychmiastowej zapaści jakości i szybkiego wypalenia zespołu).</li>
+</ol>
+<figure style="width: 300px" class="wp-caption aligncenter"><a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/02/dzien-14-tablica-scrum-i-wykres-burndown/burndown-rozgrzebywanie/" rel="attachment wp-att-1108"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/burndown-rozgrzebywanie.jpg?w=300&amp;h=231" alt="Burndown-Rozgrzebywanie" width="300" height="231" /></a><figcaption class="wp-caption-text">Ten burndown świadczy o rozgrzebywaniu zbyt dużej liczby zadań jednocześnie.</figcaption></figure>
+<p>Jeśli wykres przez część sprintu rośnie zamiast maleć to być może to świadczyć o tym, że:</p>
+<ol>
+<li>W trakcie <strong>przypominaliśmy sobie o dodatkowych zadaniach</strong> niezbędnych do realizacji wybranych historyjek. Powinniśmy popracować nad bardziej precyzyjnym planowaniem.</li>
+<li>Często natrafiamy na <strong>nieprzewidziane problemy techniczne</strong>. Powinniśmy rozważyć zastosowaniem eksperymentów technicznych, które pozwolą nam zbadać teren przed przyjęciem do realizacji &#8220;produkcyjnej&#8221; historyjki.</li>
+<li>W trakcie sprintu na zespół spada <strong>dużo dodatkowych zleceń</strong>, nie związanych z realizowanymi historyjkami (lub co gorsza PO nakazuje realizację dodatkowych historyjek). Musimy zadbać o lepszą ochroną zespołu, by dać mu swobodę sprawnej realizacji wybranych historyjek.</li>
+</ol>
+<figure style="width: 300px" class="wp-caption aligncenter"><a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/02/dzien-14-tablica-scrum-i-wykres-burndown/burndown-rozrost/" rel="attachment wp-att-1109"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/burndown-rozrost.jpg?w=300&amp;h=229" alt="Burndown-Rozrost" width="300" height="229" /></a><figcaption class="wp-caption-text">Ten burndown pokazuje wzrost zakresu prac w trakcie sprintu. O czymś zapomnieliśmy przy planowaniu? Nowe zlecenia z zewnątrz?</figcaption></figure>
+<p style="text-align:left;"><strong>Pytania do Was</strong>:<br />
+<em><a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/01/dzien-1-jesli-myslisz-ze-scrum-jest-latwy-to-znaczy-ze-go-nie-rozumiesz/comments-icon/" rel="attachment wp-att-916"><img loading="lazy" decoding="async" class="alignright" src="/wp-content/uploads/2013/01/comments-icon.png" alt="Porozmawiajmy!" width="77" height="77" /></a></em></p>
+<ol>
+<li><em>Czy utrzymujecie aktualny plan w widocznym, łatwo dostępnym miejscu, które zachęca do codziennej jego aktualizacji?<a href="http://atomic-temporary-67692707.wpcomstaging.com/2013/01/dzien-1-jesli-myslisz-ze-scrum-jest-latwy-to-znaczy-ze-go-nie-rozumiesz/comments-icon/" rel="attachment wp-att-916"><br />
+</a></em></li>
+<li><em>Czy śledzicie prace pozostałe do wykonania w trakcie sprintu?</em></li>
+<li><em>Czy Wasze burndown&#8217;y mają często podobny kształt? Czy w ruchu karteczek na Waszej tablicy możecie dostrzec powtarzalne wzorce?</em></li>
+<li><em>Co możecie wyczytać z typowego burndown&#8217;u i obserwacji tablicy, na temat Waszych przyzwyczajeń i metod organizacji pracy?</em></li>
+</ol>
+]]></content:encoded>
+					
+					<wfw:commentRss>/dzien-14-tablica-scrum-i-wykres-burndown/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Dzień 13 – Standup – Pomiar i adaptacja w trakcie sprintu</title>
+		<link>/dzien-13-standup-pomiar-i-adaptacja-w-trakcie-sprintu/</link>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Tue, 05 Feb 2013 15:00:03 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1078</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. Dzisiaj i jutro odpowiemy na dwa ważne pytania: Jak utrzymać stały rytm pracy aby uniknąć wypalenia i dodać szczyptę samodyscypliny? Jak monitorować postępy wewnątrz sprintu i aktualizować plan w oparciu o bieżącą sytuację? W Scrum służą do tego: codzienne spotkania potocznie zwane standup&#8216;ami, umieszczona w widocznym miejscu, przejrzysta &#8230; <a href="/dzien-13-standup-pomiar-i-adaptacja-w-trakcie-sprintu/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 13 – Standup – Pomiar i adaptacja w trakcie sprintu</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>Ten post jest częścią cyklu <a href="https://fluidcircle.wordpress.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p>Dzisiaj i jutro odpowiemy na dwa ważne pytania:</p>
+<ol>
+<li>Jak utrzymać <strong>stały rytm pracy</strong> aby uniknąć wypalenia i dodać szczyptę samodyscypliny?</li>
+<li>Jak monitorować postępy wewnątrz sprintu i <strong>aktualizować plan</strong> w oparciu o bieżącą sytuację?</li>
+</ol>
+<p>W Scrum służą do tego:</p>
+<ol>
+<li>codzienne spotkania potocznie zwane <em><strong>standup</strong>&#8216;ami</em>,</li>
+<li>umieszczona w widocznym miejscu, przejrzysta i łatwa w aktualizacji <strong>tablica</strong>,</li>
+<li>oraz wizualnie ilustrujący postępy <strong>wykres wypalania</strong> (<em>burndown</em>).</li>
+</ol>
+<p>Dzisiaj skoncentrujemy się na standup&#8217;ach:</p>
+<p><b>Codzienny Scrum</b> (potocznie standup) to spotkanie zespołu, na którym każdy członek zespołu dzieli się z pozostałymi informacją o tym:</p>
+<ol>
+<li><strong>Co zrobiłem</strong> od ostatniego spotkania?</li>
+<li><strong>Co zrobię</strong> przed następnym spotkaniem?</li>
+<li><strong>Czego potrzebuję</strong>, żeby wykonać zadanie?</li>
+</ol>
+<p>Zwróć uwagę na formę dokonaną w pierwszych dwóch pytaniach. Możemy w ten sposób wykrywać i rozwiązywać problemy, zanim poważnie zagrożą realizacji celu sprintu. Jeśli często zdarza nam się słyszeć <em>&#8220;Wczoraj pracowałem nad X. Dzisiaj dalej będę pracował nad X. Nic nie potrzebuję.&#8221;</em> to standup nie spełnia swojego zadania i wymaga naprawy! (W tym konkretnym przypadku może np. pomóc rozbijanie zadań na mniejsze.)</p>
+<p>Ostatnie pytanie dotyka zarówno pozytywnych jak i negatywnych aspektów pracy. Jest to jednocześnie okazja do wskazania czegoś, co mnie blokuje i zastanowienia się w gronie zespołu czy jest coś, co mogłoby pomóc wykonać zadanie szybciej i/lub lepiej.</p>
+<p>Standup nie jest jedynie okazją do wymiany informacji w gronie zespołu, a tym bardziej nie jest sposobem na raportowanie postępów do kierownika (odwiedzającego standup lub kryjącego się skórze Scrum Mastera). Jak <a href="http://controlyourchaos.wordpress.com/2012/11/28/what-is-the-daily-scrum-for/">wyraźnie pokazuje Kasia Terlecka</a> (znana w Polsce jako świetny Agile Coach):</p>
+<p style="padding-left:30px;"><strong>Celem standup&#8217;u jest planowanie!<br />
+</strong></p>
+<p>Niezależnie od tego czy stosujemy wymienione wyżej pytania czy korzystamy z innych form musimy przede wszystkim dowiedzieć się: <em>Czy jesteśmy na dobrej drodze do realizacji celu sprintu?</em> oraz <em>Jakie są następne kroki w jego kierunku?</em> i <em>Czy powinniśmy uzupełnić lub zmienić plan (czyli Backlog Sprintu)?</em></p>
+<p>Dodatkową zaletą codziennych standup&#8217;ów jest dostarczanie pewnej dozy <strong>samo-dyscypliny</strong> wynikającej z dobrowolnego zobowiązania się danej osoby do wykonania określonych zadań. Dużo trudniej marnować czas (wmawiając sobie, że potem bez problemu nadrobimy zaległości) jeśli już następnego dnia trzeba będzie przyznać się przed całym zespołem do braku postępów. Ważne tylko, żeby nie pójść z tą zasadą za daleko i stworzyć środowisko, w którym nikt nie będzie się bał przyznać do naturalnie występujących problemów w obawie przed mniej lub bardziej namacalną karą.</p>
+<p><em>Tyle korzyści! To musi trwać bardzo długo, prawda?</em></p>
+<p>Nie prawda. Jak sama nazwa wskazuje spotkanie to odbywa się <strong>na stojąco</strong>, co naturalnie zniechęca do zbytniego przedłużania dyskusji i utrudnia korzystanie z przeszkadzaczy w postaci komputera, tabletu lub telefonu. Jeśli mimo to minie <strong>15 minut</strong> to bezceremonialnie kończymy standup. Następnego dnia się uda szybciej!</p>
+<p><strong>Pytania do Was</strong>:</p>
+<ol>
+<li><em><a href="http://fluidcircle.wordpress.com/2013/01/dzien-1-jesli-myslisz-ze-scrum-jest-latwy-to-znaczy-ze-go-nie-rozumiesz/comments-icon/" rel="attachment wp-att-916"><img loading="lazy" decoding="async" class="alignright  wp-image-916" src="/wp-content/uploads/2013/01/comments-icon.png" alt="Porozmawiajmy!" width="77" height="77" /></a>Czy spotykacie się codziennie by omówić postępy i ustalić następne kroki?</em></li>
+<li><em>Czy czujecie, że Wasze standup&#8217;y przynoszą Wam oczekiwane wartości? Jakie?</em></li>
+<li><em>Jak moglibyście usprawnić przebieg Waszych standup&#8217;ów?</em></li>
+</ol>
+<p><strong>Ćwiczenie dla Was</strong>:</p>
+<ol>
+<li><em>Jako Scrum Master daj się porwać tuż przed zaplanowanym czasem standup&#8217;u. Czy zespół sam przeprowadzi spotkanie?</em></li>
+<li><em>Wypróbuj <a href="http://controlyourchaos.wordpress.com/2011/12/05/the-daily-scrum-game/">grę standupową</a> opisaną w innym artykule <a href="https://twitter.com/kateterlecka">Kasi Terleckiej</a>.</em></li>
+</ol>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Dzień 12 – Jeden za wszystkich, wszyscy za jednego</title>
+		<link>/dzien-12-jeden-za-wszystkich-wszyscy-za-jednego/</link>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Thu, 31 Jan 2013 16:08:29 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1062</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. Pamiętasz drużynę A? W każdym odcinku nasi bohaterowie odnoszą sukces dzięki twórczemu połączeniu unikalnych talentów całego zespołu. Hannibal ustala ogólną strategię, Murdock pilotuje samoloty i śmigłowce by drużyna dotarła do swojego celu, Buźka swoim czarem zyskuje niezbędną pomoc od napotkanych osób a B.A. Baracus dostarcza siłę uderzeniową za &#8230; <a href="/dzien-12-jeden-za-wszystkich-wszyscy-za-jednego/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 12 – Jeden za wszystkich, wszyscy za jednego</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>Ten post jest częścią cyklu <a href="https://fluidcircle.wordpress.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p>Pamiętasz drużynę A? W każdym odcinku nasi bohaterowie odnoszą sukces dzięki twórczemu połączeniu unikalnych talentów całego zespołu. Hannibal ustala ogólną strategię, Murdock pilotuje samoloty i śmigłowce by drużyna dotarła do swojego celu, Buźka swoim czarem zyskuje niezbędną pomoc od napotkanych osób a B.A. Baracus dostarcza siłę uderzeniową za pomocą własnych mięśni oraz broni improwizowanej z aktualnie dostępnych materiałów.</p>
+<p>Dobre zespoły Scrum działają podobnie.</p>
+<p>Tak jak pisaliśmy już <a title="Dzień 1 – Jeśli myślisz, że Scrum jest łatwy, to znaczy, że go nie rozumiesz" href="http://fluidcircle.wordpress.com/2013/01/dzien-1-jesli-myslisz-ze-scrum-jest-latwy-to-znaczy-ze-go-nie-rozumiesz/">pierwszego dnia</a>, najważniejszym czynnikiem podnoszacym efektywność zespołu jest motywacja. Aby stworzyć środowisko jej sprzyjające oraz usunąć przeszkody spowalniające zmotywowany zespół Scrum mówi, że powinien on być <strong>samoorganizujący</strong> oraz <strong>interdyscyplinarny</strong>, a wszyscy członkowie takiego zespołu powinni być <strong>współodpowiedzialni</strong> za osiągane wyniki.</p>
+<p>Nie zawsze jest jednak jasne, jak te zasady powinny przekładać się na codzienną praktykę. Dlatego dzisiaj przyjrzymy się kilku dodatkowym zasadom i konkretnym metodom pomagającym zbliżyć zespół do hiperproduktywności.</p>
+<p>Dojrzałe, wysoce efektywne zespoły pracują <strong>razem bardziej niż równolegle</strong>. Nie oznacza to, że wszystko zawsze robione jest jedną wielką grupą, ale takie zespoły na pewno kładą większy nacisk na maksymalne wykorzystanie synergii między talentami poszczególnych członków, niż na podział pracy zgodny z ich specjalizacjami.</p>
+<p><strong>Cały zespół jest &#8220;właścicielem&#8221; całego rozwiązania</strong> (<em>collective code ownership</em>) – nikt nie powinien mieć wyłączności na wprowadzanie zmian w danym module, nie ma też miejsca na to, żeby członek zespołu całkowicie ignorował jeden z obszarów prac tylko dlatego, że &#8220;<em>to nie moja działka</em>&#8220;.</p>
+<p>Dobrym zwyczajem wspierającym wspólną własność rozwiązania jest regularny <strong>przegląd tworzonego kodu</strong> (<em>code review</em>) przez innego członka zespołu. Odbywa się to nie w atmosferze kontroli pracy autora danego fragmentu, co raczej w intencji zapewnienia wysokiej jakości i czytelności kodu oraz rozpowszechniania wiedzy o systemie.</p>
+<p>Jeszcze lepsze efekty niż code review może przynieść <strong>praca w parach</strong> (<em>pair programming</em>), która polega na tym, że dane zadanie wykonują dwie osoby pracujące jednocześnie przy jednym komputerze. Jest to dość trudna technika, lecz jeśli przyjmie się w zespole, pozwala znacznie zacieśnić współpracę, podnieść jakość produkowanego kodu, a także błyskawicznie rozpowszechnić w całym zespole najlepsze praktyki techniczne i wiedzę o tworzonym systemie. Naiwnie patrząc programowanie w parach podwaja pracochłonność bieżacych zadań, lecz ta inwestycja często zwraca się z nawiązką poprzez zmniejszenie liczby błędów do naprawienia później i ułatwienie naprawianie tych błędów, które mimo wszystko wystąpią.</p>
+<p>Kolejną zaawansowaną techniką jest <strong>swarming</strong>, czyli równoczesna praca wielu członków zespołu nad jednym problemem. Swarming przydaje się przy usuwaniu wąskich gardeł w procesie. Przypuśćmy, że w zespole mamy dwóch testerów, którzy testują każdą nową funkcjonalność. Jeśli gotowe do testowania funkcjonalności nawarstwiają się i ta dwójka nie nadąża z ich przepychaniem można podjąć decyzję o chwilowym zatrzymaniu dalszego programowania i skupieniu się całego zespołu nad testowaniem oczekujących funkcji. Przy okazji warto popracować nad zautomatyzowaniem części testów lub innymi sposobami na ułatwienie dalszej pracy testerów. Po odblokowaniu zatoru zespół może spokojnie powrócić do dalszych prac bez obaw, że ich wysiłki są marnowane przez blokadę w innej części procesu wytwórczego.</p>
+<p>Swarming może być też wykorzystany jako ćwiczenie pozwalające ulepszyć sposób współpracy zespołu. W takim przypadku możemy na jeden lub dwa sprinty założyć, że <strong>cały zespół pracuje nad jedną historyjką</strong>, aż zostanie ona w 100% zakończona i dopiero wtedy zabiera się za następną. Taka organizacja pracy rzadko jest dobrym pomysłem na stałe, ale stosowana chwilowo może pomóc przebić się przez bariery ograniczające efektywność zespołu.</p>
+<p>Na jakość współpracy mogą mieć wpływ nawet pozornie drobne szczegóły organizacji pracy, takie jak np. moment przypisywania zadań do osób. Jak pisaliśmy wcześniej, lepiej gdy <a title="Dzień 3 – Diabeł tkwi w szczegółach" href="http://fluidcircle.wordpress.com/2013/01/dzien-3-diabel-tkwi-w-szczegolach/">dzieje się to <em>just-in-time</em></a>, czyli<strong> </strong>wtedy gdy zespół jest gotowy rozpocząć pracę nad tym zadaniem, a nie np. przy planowaniu sprintu.</p>
+<p>Oprócz tego ważne jest, żeby rozpisać pracę w sprincie na odpowiednio <strong>małe zadania</strong>. Zadania te nie powinny być prawie nigdy dłuższe niż jeden dzień. Dzięki temu na każdym <em>standupie</em> można od razu wykryć ew. problemy i opóźnienia. Zbyt długie zadania są wylęgarnią nieudanych sprintów. Jeśli zespół regularnie dzieli pracę na wielodniowe zadania to traci wgląd w postępy i ogranicza możliwość wzajemnej pomocy oraz stałego doskonalenia.</p>
+<p>Jak wyglądają idealni członkowie <strong>interdyscyplinarnego</strong> zespołu?</p>
+<p>Interdyscyplinarność nie oznacza pełnej wymienialności. Wręcz przeciwnie – właściwa różnorodność zespołu bardzo dobrze wpływa na jego skuteczność.  Z drugiej strony wąskie specjalizacje połączone z przyzwoleniem na zamykanie się specjalistów w swoim obszarze to prosta droga do niskiej efektywności.</p>
+<p>Idealny członek zespołu Scrum ma <strong>profil kompetencji w kształcie litery T</strong>, czyli jest <em>generalizującym specjalistą</em>: jest bardzo dobry w swojej głównej dziedzinie, ale posiada też i stale doskonali umiejętności z kilku okolicznych obszarów. Programista świetnie koduje skomplikowane algorytmy, ale umie też odnaleźć się w bazie danych, przeprowadzić testy różnych typów a nawet, o zgrozo, napisać kawałek dokumentacji.</p>
+<p>W ten sposób kompetencje całego zespołu powinny układać się podobnie jak puzle pokrywające cały zakres niezbędnych umiejętności – z główną cześcią własnego obrazka, ale też wypustkami pozwalającymi zaangażować się w inne rodzaje pracy.</p>
+<p><strong>Pytania do Was</strong>:</p>
+<ol>
+<li><em>Jak moglibyście wzmocnić współpracę Waszego zespołu?</em></li>
+</ol>
+<p><strong>Ćwiczenie dla Was</strong>:</p>
+<ol>
+<li>Stwórzcie w swoim zespole <a href="http://controlyourchaos.wordpress.com/2013/01/15/competence-matrix-how-to-make-team-skills-visible/">macierz kompetencji</a>, która pozwoli Wam lepiej zrozumieć Wasze indywidualne i grupowe możliwości.</li>
+<li>Narysujcie wspólnie <strong>koło pomocy</strong>, które pomoże Wam wspierać się nawzajem. Opis ćwiczenia znajdziecie w skądinąd świetnej (wolnodostępnej) książce <a href="http://www.moznainaczej.com.pl/Download/DoktrynaJakosci/DoktrynaJakosci.pdf">Doktryna Jakości</a> Andrzeja Blikle, na stronie 230.</li>
+</ol>
+<p><em>Jako Fluid Circle na codzień pomagamy zespołom zwiększać swoją efektywność i jednocześnie czerpać więcej satysfakcji z pracy. Jeśli chciałbyś, żebyśmy pomogli także Twojemu zespołowi zastosować opisane w tym cyklu zasady to <a title="Kontakt" href="http://fluidcircle.wordpress.com/kontakt/">chętnie z Tobą porozmawiamy</a>!</em></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Dzień 11 – Planowanie Sprintu</title>
+		<link>/dzien-11-planowanie-sprintu/</link>
+					<comments>/dzien-11-planowanie-sprintu/#comments</comments>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Tue, 22 Jan 2013 21:29:06 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1039</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. Planowanie Sprintu ma dwa cele: Uzgodnić cel sprintu. Stworzyć plan jego realizacji. Przyjrzyjmy się bliżej regułom i dobrym praktykom regulującym oba te aspekty: Uzgodnić cel sprintu Ustalenie celu sprintu rozpoczyna się od wyjaśnienia przez Właściciela Produktu aktualnych priorytetów i omówienie ich z zespołem wraz z możliwymi rozwiązaniami. Aby &#8230; <a href="/dzien-11-planowanie-sprintu/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 11 – Planowanie Sprintu</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>Ten post jest częścią cyklu <a href="https://fluidcircle.wordpress.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p><strong>Planowanie Sprintu</strong> ma dwa cele:</p>
+<ol>
+<li>Uzgodnić cel sprintu.</li>
+<li>Stworzyć plan jego realizacji.</li>
+</ol>
+<p>Przyjrzyjmy się bliżej regułom i dobrym praktykom regulującym oba te aspekty:</p>
+<p><strong>Uzgodnić cel sprintu</strong></p>
+<ul>
+<li>Ustalenie celu sprintu rozpoczyna się od <strong>wyjaśnienia</strong> przez Właściciela Produktu aktualnych priorytetów i <strong>omówienie</strong> ich z zespołem wraz z możliwymi rozwiązaniami.</li>
+<li>Aby planowanie mogło przebiegać sprawnie <a title="Dzień 7 – Backlog Produktu" href="http://fluidcircle.wordpress.com/2013/01/dzien-7-backlog-produktu/">Backlog Produktu powinien być <strong>GOTOWY</strong></a>. Jeśli nie jest, to możemy dopracować wybrane historyjki na bieżąco. Jednak jeśli zdarza się to często to powinniśmy więcej inwestować w Pielęgnację Backlogu (<em>Backlog Grooming</em>).</li>
+<li>Dla każdej historyjki powinniśmy wiedzieć <strong>co dokładnie będzie oznaczało jej zrealizowanie</strong>. Wnioski z dyskusji na ten temat powinny być zwięźle ujęte w formie Kryteriów Akceptacji, a standardy pracy wspólne dla wszystkich historyjek w Definicji Ukończenia (<em>Definition of Done</em>).</li>
+<li><strong>Niedokończone historyjki</strong> z poprzedniego sprintu nie przechodzą automatycznie do następnego, lecz wracają do Backlogu Produktu. Być może nadal są priorytetowe i zostaną ponownie wybranie, ale nie koniecznie.</li>
+<li>Oprócz listy historyjek przyjętych do realizacji warto ustalić pojedynczy <strong>cel sprintu</strong>, który da zespołowi wizję wartości, wiążącą w spójną całość wszystkie historyjki.</li>
+<li><strong>Wszystkie osoby, które biorą udział w pracach rozwojowych biorą też udział w planowaniu sprintu</strong>: od analityków, przez programistów, testerów, administratorów baz danych, projektantów interfejsu użytkownika, dokumentalistów i przedstawicieli wszystkich innych specjalności niezbędnych, żeby wytworzyć gotowy produkt.</li>
+<li><strong>Decyzja o przyjęciu do realizacji wybranych historyjek należy do całego zespołu</strong>. Nie do Właściciela Produktu. Nie do Scrum Mastera. Nie do zewnętrznego Project Managera, ani nawet do Prezesa, gdyby ten chciał się pojawić na planowaniu.</li>
+<li>Decyzja ta powinna być zrodzona z <strong>konsensusu </strong>. Głosowanie narzucające wszystkim wolę większości nie prowadzi do zdrowej współpracy zespołowej.</li>
+<li>Wiele zespołów, które wcześniej pracowały nad wielomiesięcznymi projektami, zmaga się z pytaniem: <strong>Jak zmieścić wszystkie niezbędne prace</strong> <strong>wewnątrz krótkiego sprintu?</strong> Rozwiązaniem jest wybieranie mniejszych celów. Czasem lepiej zapytać &#8220;<em>Co możemy dostarczyć w sprint?</em>&#8221; niż &#8220;<em>Jak podzielić naszą pracę na sprinty?</em>&#8220;.</li>
+<li><strong>Dostarczanie gotowych funkcjonalności powinno zacząć się od pierwszego sprintu.</strong> Architekturę aplikacji i inne wspólne elementy projektu przygotujemy przy okazji dostarczenia – być może bardzo prostej – ale konkretnej wartości.</li>
+<li>Planując prace w sprincie warto uwzględnić ulepszenia zaplanowane na ostatniej <strong>retrospekcji</strong>.</li>
+</ul>
+<p><strong>Stworzyć plan realizacji</strong></p>
+<ul>
+<li>Po wyborze i omówieniu najpilniejszej historyjki (lub kilku) następnym krokiem jest <strong>przygotowanie planu jej realizacji</strong>.</li>
+<li>Plan powinien <strong>uwzględniać wszystkie prace</strong> niezbędne do zrealizowania historyjki zgodnie z Kryteriami Akceptacji i Definicją Ukończenia.</li>
+<li>Mimo tego, że staramy się od razu stworzyć kompletny plan, musimy liczyć się z tym, że <strong>w trakcie sprintu pojawią się dodatkowe zadania</strong>, niezbędne do realizacji wybranych historyjek. Według współtwórcy Scrum Kena Schwabera może to być nawet 40% wszystkich zadań.</li>
+<li>W trakcie planowania <strong>podejmowane są decyzje techniczne</strong> niezbędne do przyjęcia historyjek do realizacji i rozpoczęcia prac. W razie potrzeby dalsze projektowanie jest zadaniem wewnątrz sprintu.</li>
+<li><strong>Powinniśmy unikać projektowania rozwiązań dla historyjek na kolejne sprinty</strong>. Zaburza to bieżący sprint (to dodatkowa praca poza realizacją aktualnie wybranych historyjek) i grozi zmarnowaniem włożonego w projektowanie wysiłku, jeśli zaprojektowana historyjka zostanie potem wyrzucona z backlogu.</li>
+<li>Jeśli podczas planowania brakuje nam wiedzy niezbędnej do przyjęcia historyjki to zamiast całej historyjki możemy rozważyć <strong>przeprowadzenie eksperymentu</strong> technicznego (<em>spike</em>) pozwalającego rozstrzygnąć wątpliwość.</li>
+<li><strong>Nie przypisujemy zaplanowanych zadań do konkretnych osób</strong>, z góry na cały sprint. Każda osoba bierze kolejne zadania zgodnie ze swoimi możliwościami dopiero wtedy, gdy dokończy poprzednie zadania. Zwykle pojedyńcza osoba nie powinna mieć przypisanych do siebie więcej niż dwóch zadań na raz.</li>
+<li>Plan realizacji historyjek, czyli Backlog Sprintu, powinien umożliwiać <strong>śledzenie postępów w rytmie dziennym</strong>. Dlatego zadania powinny być oszacowane i żadne z nich nie powinny znacznie przekraczać jednego dnia.</li>
+<li><strong>Im prostsze szacowanie </strong>pozwoli utrzymać przejrzystość w sprincie<strong> tym lepiej</strong>. Zamiast szacowania zadań w godzinach możemy ograniczyć się do trzech możliwości: &#8220;<em>tyle co nic</em>&#8220;, &#8220;<em>pół dnia</em>&#8221; i &#8220;<em>cały dzień</em>&#8221; albo rozbijać całą pracę na podobne do siebie kawałki i po prostu śledzić  liczbę pozostałych zadań.</li>
+</ul>
+<p>Na koniec ważna reguła:</p>
+<ul>
+<li><strong>Planowanie Sprintu jest ograniczone w czasie</strong> (do 4ch godzin dla 2-tygodniowego Sprintu). Nie powinniśmy przedłużać tego spotkania, nawet jeśli nie zdążyliśmy wszystkiego do końca zaplanować. W takiej sytuacji mamy dwie możliwości:  zaplanować kolejne, ograniczone w czasie spotkanie na następny dzień lub rozpocząć pracę i uzupełniać listę zadań na bieżąco.</li>
+</ul>
+<p><strong>Pytanie do Was</strong>:</p>
+<p><em>Każdy zespół nieco inaczej prowadzi Planowanie Sprintu. Jakie są Wasze doświadczenia? Podzielcie się w komentarzach.</em></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/dzien-11-planowanie-sprintu/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Dzień 10 – Jak zajrzeć w przyszłość?</title>
+		<link>/dzien-10-jak-zajrzec-w-przyszlosc/</link>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Sun, 20 Jan 2013 22:34:11 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=1013</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. W rozmowach z osobami zainteresowanymi Scrum&#8217;em często przewija się kilka mitów, np.: “W Scrum nie da się planować dłużej niż na sprint.” “Nie możemy zastosować Scrum, bo potrzebujemy przewidywalności jaką daje nam precyzyjny harmonogram.” &#8220;Nie stać nas na częstą integrację i testowanie przez cały projekt – wszystko sprawdzimy na &#8230; <a href="/dzien-10-jak-zajrzec-w-przyszlosc/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 10 – Jak zajrzeć w przyszłość?</span></a>]]></description>
+										<content:encoded><![CDATA[<p style="text-align:left;"><em>Ten post jest częścią cyklu <a href="https://fluidcircle.wordpress.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p style="text-align:left;">W rozmowach z osobami zainteresowanymi Scrum&#8217;em często przewija się kilka mitów, np.:</p>
+<ol>
+<li>“<em>W Scrum nie da się planować dłużej niż na sprint.</em>”</li>
+<li>“<em>Nie możemy zastosować Scrum, bo potrzebujemy przewidywalności jaką daje nam precyzyjny harmonogram.</em>”</li>
+<li>&#8220;<em>Nie stać nas na częstą integrację i testowanie przez cały projekt – wszystko sprawdzimy na końcu.</em>&#8220;</li>
+<li>&#8220;<em>Scrum nie nadaje się do projektów fixed-price.</em>&#8220;</li>
+</ol>
+<p style="text-align:left;">Dzisiaj zajmiemy się naprostowaniem tych nieporozumień odpowiadając na trzy pytania:</p>
+<ol>
+<li>Jak <strong>zwiększyć przewidywalność</strong> i <strong>ograniczyć ryzyko</strong> w naszych projektach?</li>
+<li>Co jeśli musimy <strong>zobowiązać się</strong> do konkretnej <strong>daty</strong>, <strong>zakresu</strong> i <strong>ceny</strong> projektu?</li>
+<li>Jak dostarczyć <strong>więcej wartości mniejszym kosztem</strong>?</li>
+</ol>
+<p style="text-align:left;"><strong>Jak zwiększyć przewidywalność i ograniczyć ryzyko?</strong></p>
+<p style="text-align:left;">Zacznijmy od innego pytania: Jak bardzo szczegółowy harmonogram projektu z jednym dużym wdrożeniem na końcu pomaga nam zabezpieczyć się przed ryzykiem opóźnienia?</p>
+<p style="text-align:left;">Nie za bardzo!</p>
+<p style="text-align:left;">Harmonogramy tego typu wpadają w pułapkę iluzorycznej precyzji. Dokładne rozpisanie poszczególnych faz nie chroni nas przed opóźnieniami. Większość problemów w projektach informatycznych wykrywana jest podczas integracji i szczegółowego testowania (problemy techniczne) i testów akceptacyjnych z użytkownikami (problemy biznesowe). Czy możemy sobie zatem pozwolić na zostawienie tych prac na sam koniec projektu? Scrum mówi, że nie: chcemy <a href="http://fluidcircle.wordpress.com/2013/01/dzien-5-scrum-jest-empirykiem-wierzy-tylko-w-to-co-moze-zobaczyc-i-dotknac/">jak najszybciej integrować, testować i pokazywać Klientom kolejne fragmenty</a> projektu, żeby jak najszybciej wykryć problemy i móc je rozwiązać zanim urosną do przytłaczających rozmiarów.</p>
+<p>A jak Scrum pomaga planować na wiele sprintów do przodu?</p>
+<p>Po pierwsze potrzebujemy <a href="http://fluidcircle.wordpress.com/2013/01/dzien-9-planning-poker/">oszacowanego</a> (w jednostkach względnych) <a href="http://fluidcircle.wordpress.com/2013/01/dzien-7-backlog-produktu/">backlogu</a>. Przed rozpoczęciem prac szacujemy tempo naszego zespołu w oparciu o nasze najlepsze przewidywania. Na tym etapie pewność nadal może być niska. Sytuacja diametralnie zmienia się już po kilku sprintach, w których uda nam się dostarczyć domknięte (zintegrowane, przetestowane, zrefaktorowane, udokumentowane, itd.) funkcjonalności.</p>
+<p>Mając przed oczami jedyną realną miarę postępu w postaci dostarczonego oprogramowania możemy znacznie odważniej spojrzeć w przyszłość. Ekstrapolując dalsze postępy na podstawie średniego tempa z poprzednich trzech sprintów lub na oko wydłużając pesymistyczny i optymistyczny wariant możemy odpowiedzieć na pytania: <em>Na kiedy dostarczymy cały backlog?</em> albo <em>Ile dostarczymy do świąt?</em> Odpowiedzią będą przedziały: &#8220;<em>prawdopodobnie między &#8230; a &#8230;</em>&#8221; oraz &#8220;<em>co najmniej &#8230; i raczej nie więcej niż &#8230;</em>&#8220;.</p>
+<figure style="width: 463px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/01/przewidywanie.jpg" alt="przewidywanie" width="463" height="307" /><figcaption class="wp-caption-text">Powiedz mi co dostarczyłeś po 3ch sprintach, a powiem Ci gdzie będziesz za 13.</figcaption></figure>
+<p style="text-align:left;"><strong>Co jeśli musimy <strong>zobowiązać się</strong> do konkretnej <strong>daty</strong>, <strong>zakresu</strong> i <strong>ceny</strong> projektu?<br />
+</strong></p>
+<p style="text-align:left;">Powyżej zobaczyliśmy jak Scrum pozwala wyraźniej ocenić sytuację w projekcie. Z drugiej strony wiedza ta nadal nie przekłada się na gwarancję i nadal Właściciel Produktu nie może narzucić zespołowi realizacji konkretnego zakresu w kolejnych sprintach (może jedynie dbać o to, żeby na szczycie backlogu były najbardziej wartościowe elementy i monitorować dalsze postępy w ich dostarczaniu). Co więc, jeśli chcemy starać się o kontrakt <em>fixed-everything</em>, czyli z ustaloną ceną, datą dostarczenia i wymaganym zakresem? Czy Scrum uniemożliwia nam realizację takich projektów?</p>
+<p style="text-align:left;">Oczywiście, że umożliwia! Tradycyjny harmonogram również nie gwarantuje powodzenia, a kwestia czy dostawca powinien <strong>wziąć na siebie ryzyko</strong> związane z takim projektem to <strong>decyzja biznesowa</strong> całkowicie niezależna od sposobu realizacji projektu. Jedyne co zmienia Scrum to to, że szybciej nastąpi konfrontacja z rzeczywistością, dzięki czemu będziemy mogli szybciej podjąć działania naprawcze.</p>
+<p><strong>Jak dostarczyć więcej wartości mniejszym kosztem</strong>?</p>
+<p>Jak już niejednokrotnie widzieliśmy, iteracyjne i inkrementalne dostarczanie produktu sprint po sprincie pozwala nam szybciej dostarczać wartość Klientom (funkcja dostarczona teraz jest warta więcej niż ta sama funkcja dostarczona za kilka miesięcy) oraz szybciej porzucić ślepe zaułki technologiczne i biznesowe (w efekcie tworząc produkt lepszej jakości i lepiej dopasowany do realnych potrzeb).</p>
+<p>Oprócz tego dostajemy jeszcze jedną korzyść: W Scrum najbardziej wartościowe funkcje dostarczane są blisko początku projektu. Oznacza to, że po pewnym czasie kolejne porcje funkcji mają coraz mniejszą wartość.</p>
+<figure style="width: 476px" class="wp-caption aligncenter"><a href="http://fluidcircle.wordpress.com/2013/01/dzien-10-jak-zajrzec-w-przyszlosc/wartosc/" rel="attachment wp-att-1018"><img loading="lazy" decoding="async" class=" " src="/wp-content/uploads/2013/01/wartosc.jpg" alt="wartosc" width="476" height="299" /></a><figcaption class="wp-caption-text">Pierwsze funkcje są obciążone kosztem budowy szkieletu aplikacji. Kolejne porcje dostarczają mnóstwo wartości z każdym sprintem. Po pewnym czasie krzywa wartości wypłaszcza się. Czas zacząć rozglądać się za kolejnym wyzwaniem!</figcaption></figure>
+<p>Daje nam to większą elastyczność w podejmowaniu decyzji o zakończeniu projektu i postawieniu przed zespołem bardziej wartościowych wyzwań. Jeśli projekt zajął nam dłużej niż przewidywaliśmy możemy <strong>zrezygnować z przedłużania go bez dużej utraty wartości</strong> (to duża różnica, bo projekt <em>waterfall</em> w takiej sytuacji nie byłby w stanie dostarczyć nic!) albo jeśli wszystko idzie zgodnie z planem możemy wspólnie z Klientem zdecydować by <strong>wcześniej zakończyć projekt i podzielić się oszczędnościami</strong>.</p>
+<p>Uzupełniając tą ostatnią możliwość o opcję wymiany niezrealizowanych wymagań (z zachowaniem pracochłonności) w trakcie trwania projektu otrzymyjemy model kontraktu znanego &#8220;<em><a title="Money for Nothing and Your Change For Free" href="http://scrum.jeffsutherland.com/2008/10/agile-contracts-money-for-nothing-and.html">money for nothing and your change for free</a></em>&#8220;, który jest dla obu stron nie-gorszy niż kontrakt <em>fixed-everything</em> i pozwala skorzystać z zalet zwinności bez utraty (złudnego?) poczucia bezpieczeństwa jakie dają takie kontrakty.</p>
+<p><strong> Pytania dla Was</strong>:</p>
+<ol>
+<li><em>Jak często dostarczacie projekty zgodnie z uzgodnionymi terminami?</em></li>
+<li><em>Czy regularny rytm dostarczania pozwoliłby Wam zwiększyć zaufanie i satysfakcję Waszych odbiorców do tego stopnia, żeby nie czuli potrzeby wymuszania długoterminowych zobowiązań?</em></li>
+<li><em>Czy jesteście przekonani, że tradycyjne kontrakty wykluczają zwinność?</em></li>
+<li><em>Jak często pod koniec projektu wykrywacie problemy, które wykryte wcześniej kosztowałyby Was dużo mniej?</em></li>
+<li><em>Czy na bieżąco odpowiadacie na pytanie o wartość kolejnych przyrostów i porzucacie projekty, w których jest ona zbyt niska (bez widoku na poprawę)?</em></li>
+</ol>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Dzień 9 – Planning Poker</title>
+		<link>/dzien-9-planning-poker/</link>
+					<comments>/dzien-9-planning-poker/#comments</comments>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Thu, 17 Jan 2013 21:38:23 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=999</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. W pewnej firmie korytarzem przechadza się nowy manager. Zagląda przez uchylone drzwi do salki konferencyjnej, a tam? O zgrozo! Developerzy siedzą i grają w karty? Cóż za bezczelność! Jest jednak nowy więc zanim zgłosi przestępców do HR postanawia bliżej zbadać temat. Wchodzi do salki a tam&#8230; Jak działa &#8230; <a href="/dzien-9-planning-poker/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 9 – Planning Poker</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>Ten post jest częścią cyklu <a href="https://fluidcircle.wordpress.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p><em>W pewnej firmie korytarzem przechadza się nowy manager. Zagląda przez uchylone drzwi do salki konferencyjnej, a tam? O zgrozo! Developerzy siedzą i grają w karty? Cóż za bezczelność! Jest jednak nowy więc zanim zgłosi przestępców do HR postanawia bliżej zbadać temat. Wchodzi do salki a tam&#8230;</em></p>
+<p><b><b>Jak działa Planning Poker?</b></b></p>
+<p>W kontekście Scrum <em>Planning Poker</em> to metoda szybkiego i skutecznego <strong>szacowania względnego rozmiaru</strong> elementów backlogu przez zespół, który będzie je realizował, używając umownych jednostek znanych punktami (lub pingwinami).</p>
+<p>W Planning Poker gra się talią zawierającą karty: 0, ½, 1, 2, 3, 5, 8, 13, 20, 40, 100, <em>nieskończoność</em>, ? i <em>kawa</em>.</p>
+<p>Rozgrywka przebiega następująco:</p>
+<p>Zespół wybiera element backlogu, który sprawia wrażenie najmniejszego i arbitralnie przypisuje mu jednego pingwina, a następnie dla każdego kolejnego elementu backlogu:</p>
+<ol>
+<li><strong>Właściciel Produktu wyjaśnia znaczenie i kontekst elementu i odpowiada na pytania zespołu.</strong></li>
+<li>Po chwili zespół przystępuje do szacowania:
+<ul>
+<li>Każdy członek zespołu szacuje jak ma się omawiany element do wzorcowego, uwzględniając pracę całego zespołu.</li>
+<li>Gdy gracz zdecyduje jakie jest jego oszacowanie, wykłada odpowiednią kartę tak, by inni nie widzieli jej wartości.</li>
+</ul>
+</li>
+<li>Gdy wszyscy już dokonają swojego wyboru karty są odkrywane:
+<ul>
+<li>Jeśli oszacowanie jest zgodne to zapisujemy wynik i przechodzimy do następnego elementu.</li>
+<li>Jeśli oszacowania różnią się co najwyżej o jeden przeskok to bierzemy wyższe oszacowanie i przechodzimy do następnego elementu.</li>
+<li><strong>Jeśli różnica jest większa to osoby, które zagrały najniżej i najwyżej wyjaśniają swoją decyzję.</strong></li>
+<li>Jeśli wynikiem szacowania jest <em>nieskończoność</em> oznacza to, że historyjka jest za duża do oszacowania.</li>
+<li>Jeśli ktoś zagra ?, oznacza to, że historyjka wymaga dalszego wyjaśnienia.</li>
+<li>Jeśli ktoś zagra <em>kawa</em> to znaczy, że czas na przerwę regeneracyjną.</li>
+</ul>
+</li>
+<li>Jeśli jest to konieczne to powtarzamy rundę – gracze wykładają zakryte karty uwzględniając wnioski z dyskusji.</li>
+<li>Rundy szacowania są powtarzan do skutku lub do znudzenia. Jeśli zespół nie będzie w stanie dojść do porozumienia w 3-4 rundy to znaczy, że historyjka wymaga dopracowania (np. przeformułowania, podzielenia lub okrojenia).</li>
+</ol>
+<p><b id="internal-source-marker_0.1371213300153613">Dlaczego Planning Poker?</b></p>
+<p>Zamiast wyliczać najczęściej przytaczane zalety Planning Pokera odeślę Was choćby do <a href="http://www.planningpoker.com/detail.html">fragmentu książki</a> Mike&#8217;a Cohn&#8217;a &#8220;<em><a href="http://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415">Agile Estimation &amp; Planning</a></em>&#8221; a tutaj skoncentrujemy się na dwóch rzadziej omawianych korzyściach, która mogą mieć większe znaczenie niż wynikowe oszacowanie:<br />
+<b id="internal-source-marker_0.1371213300153613"><br />
+Planning Poker stymuluje dyskusję o tym, co ma być zrobione</b> – liczby, które wychodzą z sesji PP są ważne, ale jeszcze ważniejsze od nich są dyskusje podczas szacownia! W ten sposób masowo odkrywane są ukryte założenia przyjmowane przez uczestników, zarówno co do zakresu jak i sposobu realizacji prac. Wszystkie ustalenia pojawiające się w czasie tych dyskusji powinny zostać zapisane w formie <em>kryteriów akceptacji</em> dla szacowanego elementu, żeby później uniknąć wątpliwości na temat jego realizacji i późniejszego odbioru przez PO.<b id="internal-source-marker_0.1371213300153613"></b></p>
+<p>Planning Poker wspiera formowanie się zespołu – dyskusja wokół szacowania kolejnych fragmentów backlogu konfrontuje zespół z potrzebą dojścia do wspólnego zrozumienia zakresu zadań i sposobu ich realizacji. Scrum Master powinien dbać o to, żeby podczas szacowania zespół występował jako spójna, współodpowiedzialna jednostka. Nieporządane są sytuacje, w których jeden z członków zespołu zrezygnowałby z wyrażenia swojej opinii lub odmówił komuś innemu takiego prawa ze względu np. na &#8220;brak kompetencji w danej specjalności&#8221;. Faktem jest (i Scrum Master powinien o tym w razie potrzeby przypomnieć), że każdy członek zespołu wnosi istotną wartość do całego procesu. W przeciwnym wypadku nie byłby członkiem tego zespołu!</p>
+<p><b id="internal-source-marker_0.1371213300153613">Może coś prostszego?<br />
+</b></p>
+<p>Nie zawsze potrzebujemy szacować z tak dużą rozdzielczością, jaką oferuje Planning Poker. Jeśli dodatkowy wysiłek nie przełoży się na możliwość podejmowania lepszych decyzji to może nam wystarczyć prostszy system szacowania, w której każdemu elementowi backlogu przypisujemy jeden z trzech rozmiarów: <strong>S</strong>,<strong> M</strong> i<strong> L</strong>, które można wyskalować np. tak:</p>
+<ul>
+<li><strong>S</strong> – możemy zrobić ~10 takich elementów w sprincie,</li>
+<li><strong>M</strong> – mniej więcej trzy w sprincie,</li>
+<li><strong>L</strong> – wypełnia prawie cały sprint.</li>
+</ul>
+<p>Wszystkie większe historyjki oznaczamy jako za duże i przed oszacowaniem okrajamy lub rozbijamy na mniejsze.</p>
+<p>Wymaga to większego wysiłku, by nieco znormalizować rozmiar proponowanych historyjek, ale wysiłek ten może z nawiązką zwrócić się poprzez wyższą jakość backlogu, który w ten sposób powstanie. Uproszczona komunikacja podczas szacowania elementów jest zastąpiona dyskusją o ich podziale. Tracimy za to możliwość zgrubnego oszacowania dużych historyjek przed ich rozbiciem.</p>
+<p>Idąc dalej możemy zamiast na szacowaniu różnorodnych elementów skoncentrować się na podziale kolejnych ulepszeń w taki sposób, by <strong>wszystkie miały podobny rozmiar</strong>. Ta metoda nie jest często stosowana, ale na pewno powinna znaleźć się wśród dostępnych narzędzi.</p>
+<p>W skrajnym przypadku możemy <strong>w ogóle nie przejmować się szacowaniem</strong>. Np. twórcy gier komputerowych dysponujący odpowiednio dużym budżetem (np. Valve) często rozwijają produkt, aż uznają, że jest gotowy, nie stosując żadnych metod formalnego obliczania, kiedy to może nastąpić.</p>
+<p><strong>Zadanie dla Was</strong>:</p>
+<ol>
+<li><em><a href="http://fluidcircle.wordpress.com/2013/01/dzien-1-jesli-myslisz-ze-scrum-jest-latwy-to-znaczy-ze-go-nie-rozumiesz/comments-icon/" rel="attachment wp-att-916"><img loading="lazy" decoding="async" class="alignright  wp-image-916" src="/wp-content/uploads/2013/01/comments-icon.png" alt="Porozmawiajmy!" width="77" height="77" /></a>Jak szacujecie rozmiar planowanych prac?</em></li>
+<li><em>Czy w szacowaniu zaangażowane są wszystkie osoby, które będą odpowiedzialne za realizację (czyli cały zespół)?</em></li>
+<li><em>Czy to szacowanie pozwala Wam podejmować lepsze decyzje?</em></li>
+<li><em>Spróbujcie oszacować przykładową porcję wymagań za pomocą prostszej metody, niż zwykle stosujecie.</em></li>
+</ol>
+]]></content:encoded>
+					
+					<wfw:commentRss>/dzien-9-planning-poker/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Dzień 8 – Historyjki użytkownika</title>
+		<link>/dzien-8-historyjki-uzytkownika/</link>
+		
+		<dc:creator><![CDATA[michal.parkola]]></dc:creator>
+		<pubDate>Wed, 16 Jan 2013 15:18:33 +0000</pubDate>
+				<category><![CDATA[Articles]]></category>
+		<category><![CDATA[Pierwsze Dni Scrum]]></category>
+		<guid isPermaLink="false">http://fluidcircle.net/?p=992</guid>
+
+					<description><![CDATA[Ten post jest częścią cyklu Pierwsze Dni Scrum. Co to jest historyjka użytkownika (user story)? Historyjki użytkownika to metoda formułowania wymagań często wykorzystywana przez zespoły Scrum. Historyjki mają często formę “Jako &#60;rola&#62;, chcę &#60;funkcja&#62;, żeby &#60;wartość&#62;.”. Jeśli nigdy wcześniej nie słyszałeś o historyjkach znajdziesz niezłe wprowadzenie w serwisie Mountain Goat Software, Mike’a Cohn’a. Czego można się &#8230; <a href="/dzien-8-historyjki-uzytkownika/" class="more-link">Continue reading <span class="screen-reader-text">Dzień 8 – Historyjki użytkownika</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>Ten post jest częścią cyklu <a href="https://fluidcircle.wordpress.com/tag/pierwsze-dni-scrum/">Pierwsze Dni Scrum</a>.</em></p>
+<p>Co to jest historyjka użytkownika (user story)?</p>
+<p>Historyjki użytkownika to metoda formułowania wymagań często wykorzystywana przez zespoły Scrum. Historyjki mają często formę “Jako &lt;rola&gt;, chcę &lt;funkcja&gt;, żeby &lt;wartość&gt;.”. Jeśli nigdy wcześniej nie słyszałeś o historyjkach znajdziesz <a href="http://www.mountaingoatsoftware.com/topics/user-stories">niezłe wprowadzenie w serwisie Mountain Goat Software, Mike’a Cohn’a</a>.</p>
+<p><b><b>Czego można się spodziewać po historyjkach?</b></b></p>
+<p>Co jakiś czas pomagamy zespołom rozpocząć stosowanie historyjek użytkownika. Najczęściej obserwujemy następujące korzyści:<b><b><br />
+</b></b></p>
+<ol>
+<li><strong>Lepszą komunikację</strong> – Historyjki użytkownika przenoszą dyskusję z poziomu technicznego na poziom opowieści z żywymi aktorami, które dużo lepiej wspierają bezpośredni dialog z odbiorcami, niezbędny do dostarczania najbardziej przydatnych rozwiązań.</li>
+<li><strong>Lepszą selekcję</strong> – Częste zadawanie pytań: “Dla kogo to robimy?” “Co on z tego będzie miał?” pozwala odrzucić dużą część zadań a oszczędzony czas zainwestować w szybsze dostarczenie priorytetowych ulepszeń, podniesienie jakości tworzonego kodu i/lub stopniową spłatę długu technicznego.</li>
+<li><strong>Więcej kreatywności</strong> – Inżynierom bardzo łatwo koncentrować się na rozwiązaniach. Jeśli jednak konkretne rozwiązanie zostanie wdrukowane w wymagania na zbyt wczesnym etapie zabieramy sobie możliwość odkrycia czegoś lepszego.</li>
+<li><strong>Więcej satysfakcji</strong> – to często niedoceniana korzyść, a znacznie wpływa na długofalową produktywność zespołu. Regularnie widząc konkretną wartość w rekach użytkowników członkowie zespołu mogą czerpać więcej dumy ze swojej pracy, w porównaniu z mechanicznym odhaczaniem zadań.</li>
+</ol>
+<p><b><b>Na co warto uważać w kontekście historyjek?</b></b></p>
+<p>Jak wszystkie inne metody organizacji pracy, także historyjki użytkownika nie są magiczną różdżką rozwiązującą wszelkie problemy. W naszej pracy z zespołami najczęściej przewijają się następujące problemy, które w dużej mierze sprowadzają się do próby opakowania w język historyjek dotychczasowych przyzwyczajeń:<b><b><br />
+</b></b></p>
+<ol>
+<li><strong>Opowieści o wodospadzie</strong> – jeśli w naszym backlogu pojawiają się historyjki typu “<em>Jako zespół chcę przygotować koncepcję rozwiązania, żeby móc kontynuować prace</em>” lub “<em>Jako zespół chcę przetestować system, żeby upewnić się, że nie ma w nim błędów.</em>” to Scrum nie przyniesie nam oczekiwanych korzyści. Dzieląc pracę w ten sposób odkładamy na później dostarczenie konkretnego rozwiązania, a co za tym idzie nie skorzystamy z możliwości wcześniejszego odkrycia problemów. Zostawiając testy na koniec będziemy też mniej uwagi poświęcać jakości realizowanych historyjek i w konswekwencji nie będziemy pewni postępów, bo każda “dostarzczona” historyjka może się okazać pełna błędów i wymagać jeszcze dużo pracy.</li>
+<li><strong>Brak (samo)dyscypliny</strong> – w pogoni za źle pojętym poczuciem sukcesu zdarza się, że zespoły, nawet w porozumieniu z Właścicielem Produktu zgadzają się na uznanie za zakończone historyjek, które nie spełniają w uzgodnionych Kryteriów Akceptacji i Definicji Ukończenia. Najczęściej ofiarą są w takim przypadku testy. Podobnie jak w dziedzinie higieny osobistej szkody nie przyjdą natychmiast, ale w środowisku pełnym zarazków, jedynie kwestią czasu jest pojawienie się poważniejszych zakarzeń.</li>
+<li><strong>Podział według pracy do wykonania, a nie wartości do dostarczenia</strong> – dużą pokusą dla istniejących organizacji jest podział prac według komponentów systemu lub specjalistycznych zespołów. Podobnie jak w przypadku opowieści o wodospadzie prowadzi to do opóźnienia dostarczenia gotowych rozwiązań i późniejszego wykrywania problemów. Tak często jak to możliwe chcemy “kroić tort” czyli dostarczać smakowite kąski obejmujące wszystkie warstwy produktu. Pytaniem, jakie powinniśmy sobie zadawać nie jest “Jak podzielić naszą pracę na historyjki?”. Dużo łatwiej skorzystać z silnych stron tej metody pytając “Jak zorganizować naszę pracę, by w najbliższym sprincie dostarczyć największą możliwą wartość?”</li>
+<li><strong>Dylemat “Czy to historyjka?”</strong> – Najwięcej czasu zajmują zawsze dyskusje, w których nie ma jednoznacznych odpowiedzi. Czasem lepiej jest po prostu uciąć taką dyskusję. Ogólna zasada jest taka, że wszystko co ma zrobić zespół z produktem powinno być w Backlogu. Dla każdego elementu Backlogu warto też zadać pytania o odbiorcę i wartość, lecz jeśli mimo to zadanie nie pasuje do formy user story to nie warto na siłę wtłaczać go w ten gorset. Tak jak wspomnieliśmy wczoraj: <a title="Dzień 7 – Backlog Produktu" href="http://fluidcircle.wordpress.com/2013/01/dzien-7-backlog-produktu/">eksperymenty techniczne, bugi i inne zadania też mogą być częścią backlogu</a>.</li>
+</ol>
+<p><b><b>Jakie pisać dobre historyjki?</b></b></p>
+<p>Pełna odpowiedź na to pytanie wykracza poza zakres niniejszego artykułu. Oprócz oczekiwanych korzyści i ostrzeżeń opisanych powyżej dobrą techniczną wskazówką jest analog SMART-celów w postaci skrótowca <a href="http://en.wikipedia.org/wiki/INVEST_(mnemonic)">INVEST</a>. Więcej o pisaniu dobrych historyjek można też przeczytać w książce “<a href="http://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685">User Stories Applied</a>” Mike’a Cohn’a.</p>
+<p><b><b>Pytania dla Was:<br />
+</b></b></p>
+<ol>
+<li><em><a href="http://fluidcircle.wordpress.com/2013/01/dzien-1-jesli-myslisz-ze-scrum-jest-latwy-to-znaczy-ze-go-nie-rozumiesz/comments-icon/" rel="attachment wp-att-916"><img loading="lazy" decoding="async" class="alignright  wp-image-916" src="/wp-content/uploads/2013/01/comments-icon.png" alt="Porozmawiajmy!" width="77" height="77" /></a>Czy dla każdego zadania zadajecie sobie pytanie komu ma ono służyć i im ma dać?</em></li>
+<li><em>Jak często nieudana próba odpowiedzi na te pytania powoduje, że odrzucacie zadanie?</em></li>
+<li><em>Czy w Waszym zespole obserwujecie spodziewane korzyści z wykorzystania historyjek? Czy obserwujecie któryś z typowych problemów z historyjkami użytkownika? Jak możecie mu zaradzić?</em>
+<ol>
+<li>Jeśli tak to jak moglibyście jeszcze wzmocnić ten efekt?</li>
+<li>Jeśli nie to jaki jest źródłowy powód? Zadajcie pięć razy pytanie “dlaczego?”.</li>
+</ol>
+</li>
+<li><em>Jak możecie podnieść Wasze (zespołu, PO, Klientów) umiejętności pisania i czytania historyjek użytkownika? Czy pomogłoby Wam zorganizowania wspólnych warsztatów treningowo-roboczych?</em></li>
+</ol>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

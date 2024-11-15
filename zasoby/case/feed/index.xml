@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Scrum w Polsce	</title>
+	<atom:link href="/zasoby/case/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description></description>
+	<lastBuildDate>Mon, 07 Oct 2013 19:10:01 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7</generator>
+	<item>
+		<title>
+		By: Team Blog &#124; Scrum in Poland &#8211; TouK		</title>
+		<link>/zasoby/case/#comment-2</link>
+
+		<dc:creator><![CDATA[Team Blog &#124; Scrum in Poland &#8211; TouK]]></dc:creator>
+		<pubDate>Mon, 07 Oct 2013 19:10:01 +0000</pubDate>
+		<guid isPermaLink="false">http://fluidcircle.net/?page_id=534#comment-2</guid>
+
+					<description><![CDATA[[...]  [...]]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;]  [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
